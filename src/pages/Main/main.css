@@ -42,19 +42,19 @@
   }
 }
 
-@media (min-width: 568px) and (max-width: 610px) {
+@media (min-width: 568px) and (max-width: 843px) {
   .cards {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (min-width: 610px) and (max-width: 940px) {
+@media (min-width: 844px) and (max-width: 1124px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-@media (min-width: 940px) {
+@media (min-width: 1125px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }

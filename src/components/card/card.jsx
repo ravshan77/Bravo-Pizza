@@ -94,6 +94,11 @@ export default function CardItem({ label, image, calories, totalWeight, totalTim
   const item = { label, image, calories, totalWeight, totalTime, ingredients, ingredientLines };
   const dispatch = useDispatch();
 
+  const getDatesOpenModal = () => {
+    dispatch(modalCard({...item}))
+    dispatch(showModal(true))
+  }
+
   return (
     <div className="card">
       <div className="products_info">
@@ -114,7 +119,7 @@ export default function CardItem({ label, image, calories, totalWeight, totalTim
           </div>
           <div className="card_product_prices">
             <p>{new Intl.NumberFormat('en-US', {style: 'decimal'}).format(totalWeight.toFixed(2)/10)} сум</p>
-            <button onClick={() => dispatch(showModal(true))}>Выбрать</button>
+            <button onClick={getDatesOpenModal}>Выбрать</button>
           </div>
         </div>
       </div>

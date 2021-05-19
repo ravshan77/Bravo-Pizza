@@ -11,7 +11,7 @@ const Pizza = () => {
   const APP_ID = "57e2140e";
   const APP_KEY = "8296dd333e28a28ed070e8554821dfeb";
   const resData = useFetch(
-    `https://api.edamam.com/search?q=pizza&app_id=${APP_ID}&app_key=${APP_KEY}&from=10&to=22`
+    `https://api.edamam.com/search?q=pizza&app_id=${APP_ID}&app_key=${APP_KEY}&from=6&to=18`
   );
 
   const pizza = resData.more && resData.hits.map((item) => item.recipe);
