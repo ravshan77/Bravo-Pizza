@@ -1,0 +1,18 @@
+.filteredPageCard {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+.pizzasText {
+  text-align: center;
+  margin-bottom: 15px;
+  color: orange;
+}
+
+.filterNotFind {
+  text-align: center;
+  width: 80vw;
+  margin: 0 auto;
+  color: red;
+}

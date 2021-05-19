@@ -1,0 +1,144 @@
+.header-logo {
+  width: 7%;
+}
+.header-logo img {
+  width: 100%;
+  height: 100%;
+}
+.Text-header {
+  display: flex;
+  justify-content: space-between;
+  width: 67%;
+  margin-left: 3%;
+  color: black;
+}
+
+.BravoPizza {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.thankYou {
+  font-size: 16px;
+}
+
+.DostafkaPizza {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.Min {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.TheCall {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.headerNumber {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+  .header-logo {
+    width: 9%;
+  }
+  .Text-header {
+    width: 75%;
+    margin-left: 3%;
+  }
+  .BravoPizza {
+    font-size: 20px;
+  }
+  .thankYou {
+    font-size: 13px;
+  }
+
+  .DostafkaPizza {
+    font-weight: bold;
+    font-size: 17px;
+  }
+  .Min {
+    font-size: 14px;
+  }
+  .TheCall {
+    font-size: 15px;
+  }
+  .headerNumber {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 768px) {
+  .header-logo {
+    width: 10%;
+  }
+  .Text-header {
+    margin-left: 3%;
+    width: 75%;
+  }
+  .BravoPizza {
+    font-size: 17px;
+  }
+  .thankYou {
+    font-size: 9px;
+  }
+
+  .DostafkaPizza {
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .Min {
+    font-size: 10px;
+  }
+  .TheCall {
+    font-size: 11px;
+  }
+  .headerNumber {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 568px) {
+  .header-logo {
+    width: 20%;
+    margin-right: 20px;
+  }
+  .header-logo img {
+    width: 70px;
+  }
+  .Text-header {
+    width: 100%;
+    text-align: center;
+  }
+  .BravoPizza {
+    font-size: 17px;
+    display: none;
+  }
+  .thankYou {
+    font-size: 10px;
+    display: none;
+  }
+
+  .DostafkaPizza {
+    font-weight: bold;
+    font-size: 17px;
+    display: block;
+  }
+ 
+  .Min {
+    font-size: 11px;
+    display: none;
+  }
+  .TheCall {
+    font-size: 12px;
+    display: none;
+  }
+  .headerNumber {
+    font-size: 13px;
+    display: none;
+  }
+}

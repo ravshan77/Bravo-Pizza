@@ -1,0 +1,62 @@
+.card {
+  position: relative;
+  width: 250px;
+  height: 410px;
+}
+.card_img img {
+  width: 210px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .4s;
+}
+.card_img img:hover {
+  padding-top: 4px;
+}
+.card_label h3 {
+  margin: 8px 0px;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.card_text_price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card_product_text p {
+  color: rgb(92, 99, 112);
+  font-size: 15px;
+}
+
+.card_product_prices {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  position: absolute;
+  bottom: 0;
+}
+.card_product_prices p {
+  font-size: 18px;
+  font-weight: 500;
+  padding-right: 20px;
+}
+.card_product_prices button {
+  font-size: 17px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  min-width: 100px;
+  background-color: rgb(255, 105, 0);
+  color: #fff;
+  border-radius: 9999px;
+  text-align: center;
+  cursor: pointer;
+  padding: 8px 30px;
+  transition: all .2s ease-in-out;
+}
+.card_product_prices button:hover {
+  background-color: rgb(228, 95, 0);
+}

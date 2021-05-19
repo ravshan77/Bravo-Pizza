@@ -1,0 +1,147 @@
+.storeCard {
+  width: 85%;
+  height: 27%;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+
+.bottom-line {
+  width: 85%;
+  margin: 0 auto;
+  color: black;
+}
+
+.img-block {
+  width: 27%;
+}
+
+.store-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+.delete_icon {
+  cursor: pointer;
+}
+.delete_icon:hover {
+  color: rgb(255, 105, 0);
+}
+.functional-block {
+  width: 71%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-item {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data-label {
+  width: 90%;
+  word-wrap: break-word;
+}
+
+.data-delete {
+  width: 10%;
+  height: 100%;
+}
+
+.bottomItem {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.buttonBlock {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.button-box {
+  width: 85%;
+  /* height: 50%; */
+  /* background-color: rgb(255, 105, 0); */
+  background-color: rgb(243, 243, 247);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  align-items: center;
+  font-weight: bolder;
+  font-family: cursive;
+}
+
+.pilusMinus-Btn {
+  width: 24%;
+  height: 70%;
+  /* background-color: white; */
+  background-color: rgb(243, 243, 247);
+  border-radius: 50%;
+  outline: none;
+  color: rgb(92, 99, 112);
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.subStore-cost {
+  font-size: 19px;
+  color: rgb(92, 99, 112);
+}
+
+.mr-top {
+  margin-top: 9%;
+  z-index: 1000000000000;
+}
+
+.costBlock {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  bottom: 0;
+}
+
+.cost {
+  text-align: end;
+}
+
+.data-label {
+  font-weight: bolder;
+  font-family: cursive;
+}
+
+@media (min-width: 320px) and (max-width: 411px) {
+  .data-label {
+    font-size: 12px;
+  }
+  .subStore-cost {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 411px) and (max-width: 568px) {
+  .data-label {
+    font-size: 14px;
+  }
+  .subStore-cost {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 768px) {
+  .data-label {
+    font-size: 15px;
+  }
+  .subStore-cost {
+    font-size: 15px;
+  }
+}
