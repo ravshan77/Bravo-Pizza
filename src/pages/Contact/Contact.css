@@ -1,0 +1,145 @@
+.contact-details {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: grid;
+  grid-template-columns: 55% 50%;
+  padding-top: 10px;
+  background-color: #fd9d3e;
+}
+.contact-order-top-img {
+  margin-top: 50px;
+  height: 138px;
+}
+.contact-order-top-img img {
+  width: 100%;
+  height: 138px;
+}
+.contact-order-bottom-img img {
+  width: 100%;
+  height: 138px;
+}
+iframe {
+  border: 2px solid yellow;
+}
+.left-side-info {
+  margin-left: 40px;
+}
+.left-side-info h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.contact-leftSide-icons a {
+  margin-top: 6px;
+  color: rgb(0, 0, 0);
+}
+.contact-leftSide-icons a:hover {
+  cursor: pointer;
+  color: rgb(228, 228, 228);
+}
+
+.contact-leftSide-icons li {
+  display: grid;
+  grid-template-columns: 11% 47%;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 20px;
+}
+
+.contact-leftSide-icons li img {
+  height: 50px;
+  width: 50px;
+  border: 1px solid rgb(92, 91, 91);
+  border-radius: 2px;
+  padding: 10px;
+  cursor: pointer;
+}
+.contact-leftSide-icons li img:hover {
+  transform: rotate(360deg);
+  height: 50px;
+  width: 50px;
+  /* transform: scale(1.5); */
+  transition-duration: 1s;
+  border: 1px solid #fd9d3e;
+}
+
+/* RIGHTSIDE INPUTS BEGIN HERE */
+.contact-rightSide-inputs input,
+textarea {
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  background-color: transparent;
+  resize: none;
+}
+.contact-rightSide-inputs textarea {
+  padding-bottom: 30px;
+}
+input::placeholder {
+  color: black;
+  font-size: 15px;
+}
+textarea::placeholder {
+  color: black;
+  font-size: 15px;
+}
+.contact-rightSide-inputs button {
+  cursor: pointer;
+  margin-top: 10px;
+  outline: none;
+  border: 1px solid black;
+  background-color: transparent;
+  padding: 15px 0;
+  width: 80%;
+}
+.contact-rightSide-inputs button:hover {
+  box-shadow: 0 0 2px rgb(70, 68, 68);
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+  .left-side-info {
+    margin-left: 20px;
+  }
+  .left-side-info h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .contact-leftSide-icons li {
+    grid-template-columns: 17% 46%;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 16px;
+  }
+  .left-side-info h2 {
+    margin-left: 20px;
+  }
+  .contact-rightSide-inputs input,
+  textarea {
+    width: 75%;
+    margin-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .contact-rightSide-inputs textarea {
+    padding-bottom: 25px;
+  }
+  .contact-rightSide-inputs button {
+    margin-top: 10px;
+    padding: 15px 0;
+    width: 75%;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1100px) {
+  .contact-leftSide-icons li {
+    grid-template-columns: 17% 46%;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+  .contact-rightSide-inputs input,
+  textarea {
+    margin-top: 10px;
+  }
+}
