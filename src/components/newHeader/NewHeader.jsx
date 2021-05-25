@@ -38,7 +38,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const NewHeader = () => {
+const NewHeader = ({ props}) => {
+  const { history } = props;
+
+  const his = history.location.pathname
+
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -134,7 +138,7 @@ const NewHeader = () => {
   );
 
   return (
-    <div>
+    <div className={`${his == "/goToStore" ? "dnn" : "dnnon"}`}>
       <AppBar position="static" className={classes.AppBar}>
         <Toolbar className={classes.Toolbar}>
           <div className="header-logo">

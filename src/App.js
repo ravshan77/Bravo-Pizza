@@ -11,10 +11,11 @@ import { useSelector } from "react-redux";
 import NewHeader from "./components/newHeader/NewHeader";
 import BottomHeader from "./components/Bottom-Header/bottomHeader";
 import ProductModal from "./components/productModal/ProductModal";
-import Caarousel from "./components/carousel/Carousel";
+// import Caarousel from "./components/carousel/Carousel";
 import Contact from "./pages/Contact/Contact"
 import About from "./pages/About/About"
 import Footer from "./pages/Footer/Footer"
+import GoToStore from "./pages/goToStore/goToStore"
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
@@ -26,15 +27,13 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const { foods } = useSelector((state) => state.cardData);
 
-  console.log("stordan App ga kegan foods", foods);
-
   const classes = useStyles();
 
   return (
     <div className="App">
-      <NewHeader />
-      <BottomHeader />
-      <Caarousel />
+      <Route render={(props) => <NewHeader props={props} />} />
+      <Route render={(props) => <BottomHeader props={props} />} />
+      {/* <Caarousel /> */}
       <ProductModal />
       <Switch>
         <Route path="/" exact render={(props) => <Pizza props={props} />} />
@@ -59,6 +58,10 @@ function App() {
           exact
           render={(props) => <About props={props} />}
         />
+        <Route 
+          path="/goToStore" 
+          exact 
+          render={(props) => <GoToStore props={props}  />} />
 
         <Route
           path="/filteredByCost/:id"
@@ -68,20 +71,6 @@ function App() {
         />
       </Switch>
 	  <Footer/>
-      {/* <ThemeComponenet /> */}
-      {/* <CallBack /> */}
-      {/* <ThemeProvider>
-        <ChildComponent />
-        <ParentComponent />
-        <ToggleBtn />
-      </ThemeProvider> */}
-      {/* <Memo /> */}
-      {/* <Suspense fallback={<h1>loading...</h1>} >
-        <Card />
-        <List />
-      </Suspense> */}
-      {/* <Footer/> */}
-      {/* <Example/> */}
     </div>
   );
 }

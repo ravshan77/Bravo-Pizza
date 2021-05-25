@@ -6,6 +6,7 @@ import './main.css';
 const Main = ({ pizza }) => {
 	return (
 		<div className='mainPage'>
+			
 			<div className='halal'>
 				<div className='halal_img'>
 					<img

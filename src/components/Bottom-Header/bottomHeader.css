@@ -1,10 +1,25 @@
+.dnne {
+  display: none;
+}
+
+.dnbl {
+  display: block;
+}
+
+@media (max-width: 960px) {
+  .dnne {
+    display: inline;
+  }
+}
+
+
 .activeClass {
   color: rgb(255, 105, 0);
 }
 .link_items {
   display: flex;
   align-items: center;
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
 }
 .link-header-pages {
   list-style: none;

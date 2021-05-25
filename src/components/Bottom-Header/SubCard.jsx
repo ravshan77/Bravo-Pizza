@@ -24,7 +24,7 @@ const SubCard = ({ show }) => {
           {collected > 0 ? (
             <div className="store">
               <div className="goToStore">
-                <Link to="">
+                <Link to="/goToStore">
                   <div className="StoreGo">
                     <LocalShippingOutlinedIcon fontSize="large" />
                     <span className="goStoreText">➡ Go to store</span>

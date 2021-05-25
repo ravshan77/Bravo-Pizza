@@ -1,3 +1,11 @@
+.dnn {
+  display: none;
+}
+
+.dnnon {
+  display: block;
+}
+
 .header-logo {
   width: 7%;
 }
@@ -128,7 +136,7 @@
     font-size: 17px;
     display: block;
   }
- 
+
   .Min {
     font-size: 11px;
     display: none;
