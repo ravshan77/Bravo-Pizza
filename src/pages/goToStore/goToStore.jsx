@@ -5,6 +5,7 @@ import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import logo from "../../assets/Logo/photo_2021-05-26_02-30-21.jpg";
 import "./goToStore.css";
 import { Link } from "react-router-dom";
 import SvgIcon from "@material-ui/core/SvgIcon";
@@ -30,6 +31,7 @@ import Popover from "@material-ui/core/Popover";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 // import Cake from "../../pages/cake/cake";
 // import StepperOne from "../../components/Steppers/Stepper1/Stepper1";
+import NumberFormat from "react-number-format";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -119,10 +121,21 @@ const useStyles = makeStyles((theme) => ({
   },
   namaAndPhone: {
     width: "45%",
-    marginTop: "3%",
+    marginTop: "1%",
     [theme.breakpoints.only("xs")]: {
       width: "90%",
     },
+    border: "none",
+  },
+  TelNumber: {
+    width: "45%",
+    marginTop: "3.6%",
+    marginBottom: "0",
+    [theme.breakpoints.only("xs")]: {
+      width: "90%",
+    },
+    border: "none",
+    // backgroundColor:"red"
   },
   FlatUntilFlor: {
     width: "45%",
@@ -133,10 +146,10 @@ const useStyles = makeStyles((theme) => ({
   },
   cardCode: {
     width: "100%",
+    maxLines: "6",
   },
   MMYY: {
     width: "45%",
-    maxLines: "2",
   },
   typography: {
     padding: theme.spacing(2),
@@ -193,6 +206,7 @@ const GoToStore = () => {
     const onSubmit = (data) => {
       console.log(data);
       setActiveStep((prevActiveStep) => prevActiveStep + 1);
+      alert(JSON.stringify(data));
     };
 
     const dispatch = useDispatch();
@@ -338,7 +352,6 @@ const GoToStore = () => {
                   <Controller
                     render={({ field }) => (
                       <TextField
-                        id="standard-basic"
                         className={classes.namaAndPhone}
                         type="text"
                         required={true}
@@ -348,29 +361,27 @@ const GoToStore = () => {
                     )}
                     name="Name"
                     control={control}
-                    defaultValue=""
                   />
                   <Controller
                     render={({ field }) => (
-                      <TextField
-                        id="standard-basic"
-                        className={classes.namaAndPhone}
-                        type="number"
+                      <NumberFormat
                         required={true}
                         {...field}
-                        label="Phone Number"
+                        format="+998 (##) ###-####"
+                        allowEmptyFormatting
+                        mask="_"
+                        customInput={TextField}
+                        className={classes.TelNumber}
                       />
                     )}
                     name="Tel nomer"
                     control={control}
-                    // defaultValue="9989"
                   />
                 </div>
                 <div className="Two_store_TopItem">
                   <Controller
                     render={({ field }) => (
                       <TextField
-                        id="standard-basic"
                         className={classes.namaAndPhone}
                         type="text"
                         required={true}
@@ -380,12 +391,10 @@ const GoToStore = () => {
                     )}
                     name="Stred"
                     control={control}
-                    defaultValue=""
                   />
                   <Controller
                     render={({ field }) => (
                       <TextField
-                        id="standard-basic"
                         className={classes.namaAndPhone}
                         type="text"
                         required={true}
@@ -395,7 +404,6 @@ const GoToStore = () => {
                     )}
                     name="Home Number"
                     control={control}
-                    defaultValue=""
                   />
                 </div>
                 <div className="Two_store_TopItem">
@@ -403,7 +411,6 @@ const GoToStore = () => {
                     <Controller
                       render={({ field }) => (
                         <TextField
-                          id="standard-basic"
                           className={classes.FlatUntilFlor}
                           type="number"
                           required={true}
@@ -413,12 +420,10 @@ const GoToStore = () => {
                       )}
                       name="Flat"
                       control={control}
-                      defaultValue=""
                     />
                     <Controller
                       render={({ field }) => (
                         <TextField
-                          id="standard-basic"
                           className={classes.FlatUntilFlor}
                           type="number"
                           required={true}
@@ -428,14 +433,12 @@ const GoToStore = () => {
                       )}
                       name="Entrance"
                       control={control}
-                      defaultValue=""
                     />
                   </div>
                   <div className="Two_store_HomeCodes">
                     <Controller
                       render={({ field }) => (
                         <TextField
-                          id="standard-basic"
                           className={classes.FlatUntilFlor}
                           type="number"
                           toUpperCase
@@ -446,12 +449,10 @@ const GoToStore = () => {
                       )}
                       name="Door code"
                       control={control}
-                      defaultValue=""
                     />
                     <Controller
                       render={({ field }) => (
                         <TextField
-                          id="standard-basic"
                           className={classes.FlatUntilFlor}
                           type="number"
                           required={true}
@@ -461,7 +462,6 @@ const GoToStore = () => {
                       )}
                       name="Floor"
                       control={control}
-                      defaultValue=""
                     />
                   </div>
                 </div>
@@ -469,7 +469,6 @@ const GoToStore = () => {
                   <Controller
                     render={({ field }) => (
                       <TextField
-                        id="standard-basic"
                         className={classes.textArea}
                         type="text"
                         {...field}
@@ -478,7 +477,6 @@ const GoToStore = () => {
                     )}
                     name="Comment to address"
                     control={control}
-                    defaultValue=""
                   />
                 </div>
               </Card>
@@ -535,25 +533,34 @@ const GoToStore = () => {
                     <img style={{ width: "100%", height: "60%" }} src={mir} />
                   </div>
                   <div className="bank_card_imges">
-                    <img style={{ width: "100%", height: "60%" }} src={masterCard}
+                    <img
+                      style={{ width: "100%", height: "60%" }}
+                      src={masterCard}
                     />
                   </div>
                 </div>
                 <div className="bank_card_coders_zero_item">
                   <Controller
                     render={({ field }) => (
-                      <TextField
-                        id="standard-basic"
-                        className={classes.cardCode}
-                        type="number"
+                      <NumberFormat
                         required={true}
                         {...field}
-                        label="Card Code"
+                        format="#### #### #### ####"
+                        allowEmptyFormatting
+                        mask="_"
+                        customInput={TextField}
+                        className={classes.cardCode}
                       />
+                      // <TextField
+                      //   className={classes.cardCode}
+                      //   type="number"
+                      //   required={true}
+                      //   {...field}
+                      //   label="Card Code"
+                      // />
                     )}
                     name="card code"
                     control={control}
-                    defaultValue=""
                   />
                 </div>
                 <div className="bank_card_codes_blok">
@@ -561,7 +568,6 @@ const GoToStore = () => {
                     <Controller
                       render={({ field }) => (
                         <TextField
-                          id="standard-basic"
                           className={classes.MMYY}
                           type="number"
                           required={true}
@@ -571,7 +577,6 @@ const GoToStore = () => {
                       )}
                       name="MM Code"
                       control={control}
-                      defaultValue=""
                     />
                     <div className="card_slesh">
                       <h3>/</h3>
@@ -579,7 +584,6 @@ const GoToStore = () => {
                     <Controller
                       render={({ field }) => (
                         <TextField
-                          id="standard-basic"
                           className={classes.MMYY}
                           type="number"
                           required={true}
@@ -589,14 +593,12 @@ const GoToStore = () => {
                       )}
                       name="YY Code"
                       control={control}
-                      defaultValue=""
                     />
                   </div>
                   <div className="bank_card_codes_two_item">
                     <Controller
                       render={({ field }) => (
                         <TextField
-                          id="standard-basic"
                           className={classes.CVC}
                           type="password"
                           required={true}
@@ -606,7 +608,6 @@ const GoToStore = () => {
                       )}
                       name="CVC Code"
                       control={control}
-                      defaultValue=""
                     />
 
                     <InfoOutlinedIcon onClick={handleClick} />
@@ -634,7 +635,6 @@ const GoToStore = () => {
                   <Controller
                     render={({ field }) => (
                       <TextField
-                        id="standard-basic"
                         className={classes.cardCode}
                         type="text"
                         required={true}
@@ -644,10 +644,16 @@ const GoToStore = () => {
                     )}
                     name="Card holder"
                     control={control}
-                    defaultValue=""
                   />
                 </div>
               </Card>
+              <div style={{marginTop:"5%"}}>
+                <p className="store_bankCard_Cost">
+                Do you agree to withdraw  
+                {"  "} <span className="store_bankCard_Cost_red">  {new Intl.NumberFormat("en-US", { style: "decimal" }).format(toOrder.toFixed(2) / 10)} so'm</span> from your bank card? Click
+                the agree button to agree
+                </p>
+              </div>
               <Button
                 disabled={activeStep === 0}
                 onClick={handleBack}
@@ -655,9 +661,11 @@ const GoToStore = () => {
               >
                 Back
               </Button>
-              <Link to="/">
-                <Button type="submit" className={classes.finishedBtn}>consent</Button>
-              </Link>
+              {/* <Link to="/"> */}
+              <Button type="submit" className={classes.finishedBtn}>
+                consent
+              </Button>
+              {/* </Link> */}
             </form>
           </div>
         );
@@ -671,10 +679,7 @@ const GoToStore = () => {
       <div className="store_header">
         <div className="store_header_logos">
           <div style={{ width: "20%", marginRight: "5%" }}>
-            <img
-              style={{ width: "100%", height: "100%" }}
-              src="https://dostavkainfo.uz/wp-content/uploads/2020/03/bravo_pizza.jpg"
-            />
+            <img style={{ width: "100%", height: "100%" }} src={logo} />
           </div>
           <div className="Logo-item">
             <p className="BravoPizza">Bravo Pizza</p>

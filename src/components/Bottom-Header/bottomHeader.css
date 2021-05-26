@@ -12,18 +12,20 @@
   }
 }
 
-
 .activeClass {
   color: rgb(255, 105, 0);
 }
 .link_items {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   /* padding-left: 2rem; */
 }
 .link-header-pages {
-  list-style: none;
-  padding: 5px 0px;
+  /* padding: 5px 0px; */
+  padding-top: 6px;
+  display: flex;
+  align-items: center;
   font-size: 100%;
   margin-right: 35px;
   font-weight: bolder;

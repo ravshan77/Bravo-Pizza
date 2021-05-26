@@ -20,7 +20,6 @@
 
 /* STORE CARD HEADER  END*/
 
-
 /* FIRST STORE STYLE */
 .first_Store {
   width: 90%;
@@ -371,9 +370,29 @@
   margin: 2% auto;
 }
 
+.store_bankCard_Cost {
+  font-size: 16px;
+  font-weight: bolder;
+  /* font-family: cursive; */
+}
+.store_bankCard_Cost_red {
+  text-decoration-line: underline;
+  color: red;
+  font-size: 20px;
+}
+
+.store_bankCard_Cost_red {
+  font-size: 20px;
+}
 @media (min-width: 768px) and (max-width: 960px) {
   .Three_store_form {
     width: 55%;
+  }
+  .store_bankCard_Cost {
+    font-size: 16px;
+  }
+  .store_bankCard_Cost_red {
+    font-size: 18px;
   }
 }
 
@@ -381,17 +400,35 @@
   .Three_store_form {
     width: 65%;
   }
+  .store_bankCard_Cost {
+    font-size: 15px;
+  }
+  .store_bankCard_Cost_red {
+    font-size: 17px;
+  }
 }
 
 @media (min-width: 568px) and (max-width: 600px) {
   .Three_store_form {
     width: 70%;
   }
+  .store_bankCard_Cost {
+    font-size: 14px;
+  }
+  .store_bankCard_Cost_red {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 568px) {
   .Three_store_form {
     width: 100%;
+  }
+  .store_bankCard_Cost {
+    font-size: 12px;
+  }
+  .store_bankCard_Cost_red {
+    font-size: 14px;
   }
 }
 

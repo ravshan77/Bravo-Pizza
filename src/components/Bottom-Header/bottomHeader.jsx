@@ -42,10 +42,6 @@ const BottomHeader = ({ props }) => {
     setShow(!show);
   };
 
-  const handleMouseLeave = () => {
-    setShow(!show);
-  };
-
   const handleChangeCost = (event) => {
     setCost(() => event.target.value);
   };
@@ -93,14 +89,14 @@ const BottomHeader = ({ props }) => {
                 so'm
               </p>
               <p className={`${collected <= 0 ? "korzenka" : "off"}`}>Store</p>
-              <IconButton
-                onMouseEnter={handleMouseMove || handleMouseLeave}
+              <div
+                onMouseEnter={handleMouseMove}
                 aria-label="show 11 new notifications"
               >
                 <Badge badgeContent={collected} color="secondary">
                   <LocalGroceryStoreIcon htmlColor="black" />
                 </Badge>
-              </IconButton>
+              </div>
             </div>
           </div>
         </div>
