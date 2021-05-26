@@ -23,12 +23,12 @@ const filteredByCost=data && data.filter((d)  =>  d.totalWeight.toFixed(3)*100 <
         <h1 className="pizzasText">ᖴIᒪTEᖇ ᑭᖇOᗪᑌᑕT</h1>
       <div className="cards">
 
-          {filteredByCost.length  > 5 ? (
+          {filteredByCost.length  > 4 ? (
             filteredByCost.map((item) => {
               return <CardItem key={item.id} {...item} />
             })
           ) : (
-              <h3 className="filterNotFind"> Bunday narxda chiqarilgan mahsulotlarimizimiz mavjud emas ❗❗❗</h3>
+              <h3 className="filterNotFind"> We do not have products manufactured at this price ❗❗❗</h3>
           )}
 
       </div>

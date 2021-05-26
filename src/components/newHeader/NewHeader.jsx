@@ -90,7 +90,7 @@ const NewHeader = ({ props }) => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      {/* <MenuItem onClick={handleMenuClose}>Profile</MenuItem> */}
       {/* <MenuItem onClick={handleMenuClose}>My account</MenuItem> */}
       <Link to="/about">
         <MenuItem onClick={handleMenuClose}>About</MenuItem>

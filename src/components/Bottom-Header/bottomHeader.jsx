@@ -64,6 +64,12 @@ const BottomHeader = ({ props }) => {
               <NavLink to="/cake" activeClassName="activeClass">
                 <li className="link-header-pages">Cakes</li>
               </NavLink>
+              <NavLink to="/about" activeClassName="activeClass">
+                <li className="link-header-pages disp_none">about</li>
+              </NavLink>
+              <NavLink to="/contact" activeClassName="activeClass" >
+                <li className="link-header-pages disp_none">contact</li>
+              </NavLink>
               <div className="search">
                 <input
                   placeholder="Cost search"
