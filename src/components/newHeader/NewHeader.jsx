@@ -10,8 +10,8 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
+import logo from "../../assets/Logo/photo_2021-05-26_02-30-21.jpg";
 import "./NewHeader.css";
-import About from "../../pages/About/About"
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -23,7 +23,10 @@ const useStyles = makeStyles((theme) => ({
   },
   Toolbar: {
     width: "90%",
-    margin: "0 auto",
+    margin: "1% auto",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems:"center",
   },
   sectionDesktop: {
     display: "none",
@@ -36,10 +39,21 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       display: "none",
     },
+    MoreIcon:{
+      marginRight:"0px",
+      paddingLeft:"0px",
+      display: "flex",
+      justifyContent:"flex-end",
+
+    }
   },
 }));
 
-const NewHeader = () => {
+const NewHeader = ({ props }) => {
+  const { history } = props;
+
+  const his = history.location.pathname;
+
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -108,22 +122,22 @@ const NewHeader = () => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
+        {/* <MenuItem>
+          <IconButton aria-label="show 4 new mails" color="inherit">
+            <Badge badgeContent={4} color="secondary">
+              <MailIcon />
+            </Badge>
+          </IconButton>
+          <p>Messages</p>
+        </MenuItem> */}
+      {/* <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
           <Badge badgeContent={11} color="secondary">
             <NotificationsIcon />
           </Badge>
         </IconButton>
         <p>Notifications</p>
-      </MenuItem>
+      </MenuItem> */}
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -139,13 +153,11 @@ const NewHeader = () => {
   );
 
   return (
-    <div>
+    <div className={`${his == "/goToStore" ? "dnn" : "dnnon"}`}>
       <AppBar position="static" className={classes.AppBar}>
-        <Toolbar className={classes.Toolbar}>
+        <div className={classes.Toolbar}>
           <div className="header-logo">
-            <img
-              src="https://dostavkainfo.uz/wp-content/uploads/2020/03/bravo_pizza.jpg"
-            />
+            <img src={logo} />
           </div>
           <div className="Text-header">
             <div className="Logo-item">
@@ -154,7 +166,8 @@ const NewHeader = () => {
             </div>
             <div>
               <p className="DostafkaPizza">
-                Dostafka pizza <span style={{ color: "rgb(255, 105, 0)" }}>Karshi</span>
+                Dostafka pizza{" "}
+                <span style={{ color: "rgb(255, 105, 0)" }}>Karshi</span>
               </p>
               <p className="Min">33 min • 4.5 ⭐</p>
             </div>
@@ -165,16 +178,18 @@ const NewHeader = () => {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="default"
-            >
-              <AccountCircle />
-            </IconButton>
+            {/* <MenuItem> */}
+              <IconButton
+                edge="end"
+                aria-label="account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={handleProfileMenuOpen}
+                color="default"
+              >
+                <AccountCircle />
+              </IconButton>
+            {/* </MenuItem> */}
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
@@ -183,12 +198,13 @@ const NewHeader = () => {
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
               color="default"
+              className={classes.MoreIcon}
             >
-              <MoreIcon />
+              <MoreIcon className={classes.MoreIcon} />
             </IconButton>
             
           </div>
-        </Toolbar>
+        </div>
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
@@ -197,6 +213,5 @@ const NewHeader = () => {
 };
 
 export default NewHeader;
-
 
 // created by Ravshan

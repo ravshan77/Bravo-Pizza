@@ -1,6 +1,10 @@
 .img-txt-top {
   margin: 0 auto;
+<<<<<<< HEAD
   width: 90%;
+=======
+  width: 97%;
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
   margin-top: 80px;
   display: grid;
   padding-bottom: 20px;
@@ -22,9 +26,17 @@
 }
 .para-one {
   margin-bottom: 20px;
+<<<<<<< HEAD
 }
 .para-two {
   margin-bottom: 20px;
+=======
+  font-size: 20px;
+}
+.para-two {
+  margin-bottom: 20px;
+  font-size: 20px;
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
 }
 .checkImg {
   height: 35px;
@@ -79,7 +91,10 @@ li {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   font-size: 18px;
+<<<<<<< HEAD
   font-weight: bold;
+=======
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
 }
 .z-index:hover {
   color: red;
@@ -100,6 +115,7 @@ li {
   transition-duration: 0.5s;
 }
 .grid-txt {
+<<<<<<< HEAD
   font-size: 17px;
 }
 .bold-txt {
@@ -137,6 +153,15 @@ li {
   .image1 {
     height: 628px;
     width: 490px;
+=======
+  font-size: 18px;
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+  .image1 {
+    height: 680px;
+    width: 569px;
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
   }
   .left-heading {
     margin-bottom: 14px;
@@ -149,6 +174,7 @@ li {
     margin-bottom: 13px;
     font-size: 18px;
   }
+<<<<<<< HEAD
   .lefted-txt li {
     font-size: 18px;
   }
@@ -252,6 +278,8 @@ li {
     font-size: 18px;
     margin-bottom: 6px;
   }
+=======
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
   .checkImg {
     height: 29px;
     width: 29px;
@@ -266,6 +294,7 @@ li {
     margin-top: 60px;
     grid-template-columns: 1fr 1fr;
   }
+<<<<<<< HEAD
   .grid-txt {
     font-size: 17px;
   }
@@ -445,5 +474,19 @@ li {
   }
   .grid-txt {
     font-size: 17px;
+=======
+}
+@media (min-width: 1000px) and (max-width: 1100px) {
+  .grid-image-wrapper {
+    margin-top: 60px;
+  }
+  .grid-image {
+    width: 232px;
+    height: 490px;
+  }
+  .image-team {
+    height: 272px;
+    width: 233px;
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
   }
 }

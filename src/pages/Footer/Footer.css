@@ -1,7 +1,11 @@
 .footer-wrapper {
   margin-top: 50px;
   background-color: rgb(48, 46, 46);
+<<<<<<< HEAD
   border: 10px solid #fd9d3e;
+=======
+  border: 8px solid #fd9d3e;
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
   width: 100%;
 }
 .inner-txt {
@@ -50,6 +54,7 @@
   width: 45px;
   transition-duration: 0.5s;
 }
+<<<<<<< HEAD
 @media (min-width: 900px) and (max-width: 1000px) {
   .icons {
     width: 755px;
@@ -184,3 +189,5 @@
     font-size: 18px;
   }
 }
+=======
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb

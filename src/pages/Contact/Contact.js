@@ -18,7 +18,11 @@ const Contact = () => {
 
       <div className="contact-details">
         <div className="left-side-info">
+<<<<<<< HEAD
           <h2>Get in touch with us</h2>
+=======
+          <h2>Contact Details</h2>
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
           <div className="contact-txt">
             <ul className="contact-leftSide-icons">
               <li>
@@ -64,6 +68,7 @@ const Contact = () => {
             <input type="text" placeholder="Phone *" />
           </div>
 
+<<<<<<< HEAD
           <div className="adress">
             <input type="text" placeholder="Adress *" />
           </div>
@@ -74,6 +79,13 @@ const Contact = () => {
           <div className="submit-btn">
           <button type="submit">Send</button>
           </div>
+=======
+          <div className="textarea">
+            <textarea placeholder="Message *" />
+          </div>
+
+          <button type="submit">Send</button>
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
         </div>
       </div>
       {/* BACKGROUND-IMAGE */}

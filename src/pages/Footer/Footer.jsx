@@ -31,8 +31,12 @@ const Footer = () => {
 
         <div className="div-one">
           <h4>FOLLOW US</h4>
+<<<<<<< HEAD
           <p>Quaerat neque purus ipsum at neque dolor primis tempus purus  </p>
           <p>Lorem ipsum </p>
+=======
+          <p>Quaerat neque purus ipsum at neque dolor primis tempus</p>
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
         </div>
       </div>
         <div className="icon-links">

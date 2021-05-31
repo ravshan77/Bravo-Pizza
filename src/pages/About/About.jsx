@@ -215,7 +215,7 @@ const About = () => {
         <div className="grid-image">
           <img src={team8} className="image-team" />
           <p className="z-index ">Executive Chefv</p>
-          <p className="bold-txt">STEPHANIE REED</p>
+          <p>STEPHANIE REED</p>
           <p className="grid-txt">Everything We Pizza, We Pizza With Love. Designer Fastfood.</p>
           <div className="grid-icons">
             <a href="instagram.com">

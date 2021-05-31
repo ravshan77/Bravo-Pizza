@@ -4,12 +4,15 @@
   grid-template-columns: 55% 50%;
   padding-top: 10px;
   background-color: #fd9d3e;
+<<<<<<< HEAD
   justify-content: center;
   justify-items: center;
   align-items: center;
 }
 .contact-wrapper {
   width: 100%;
+=======
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
 }
 .contact-order-top-img {
   margin-top: 50px;
@@ -45,11 +48,18 @@ iframe {
 
 .contact-leftSide-icons li {
   display: grid;
+<<<<<<< HEAD
   grid-template-columns: 18% 60%;
   font-size: 18px;
   line-height: 23px;
   margin-bottom: 20px;
   padding-left: 30px;
+=======
+  grid-template-columns: 11% 47%;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 20px;
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
 }
 
 .contact-leftSide-icons li img {
@@ -68,10 +78,15 @@ iframe {
   transition-duration: 1s;
   border: 1px solid #fd9d3e;
 }
+<<<<<<< HEAD
 /* RIGHTSIDE INPUTS BEGIN HERE */
 .contact-rightSide-inputs {
   width: 90%;
 }
+=======
+
+/* RIGHTSIDE INPUTS BEGIN HERE */
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
 .contact-rightSide-inputs input,
 textarea {
   width: 80%;
@@ -84,7 +99,11 @@ textarea {
   resize: none;
 }
 .contact-rightSide-inputs textarea {
+<<<<<<< HEAD
   padding-bottom: 10px;
+=======
+  padding-bottom: 30px;
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
 }
 input::placeholder {
   color: black;
@@ -107,6 +126,7 @@ textarea::placeholder {
   box-shadow: 0 0 2px rgb(70, 68, 68);
 }
 
+<<<<<<< HEAD
 @media (min-width: 1100px) and (max-width: 1500px) {
   .contact-leftSide-icons li {
     grid-template-columns: 17% 55%;
@@ -143,10 +163,13 @@ textarea::placeholder {
   }
 }
 
+=======
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
 @media (min-width: 900px) and (max-width: 1000px) {
   .left-side-info {
     margin-left: 20px;
   }
+<<<<<<< HEAD
   .contact-details {
     justify-content: center;
     justify-items: center;
@@ -163,6 +186,17 @@ textarea::placeholder {
     font-size: 16px;
     line-height: 18px;
     margin-bottom: 20px;
+=======
+  .left-side-info h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .contact-leftSide-icons li {
+    grid-template-columns: 17% 46%;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 16px;
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
   }
   .left-side-info h2 {
     margin-left: 20px;
@@ -175,8 +209,12 @@ textarea::placeholder {
     padding-bottom: 15px;
   }
   .contact-rightSide-inputs textarea {
+<<<<<<< HEAD
     padding-bottom: 10px;
     padding-top: 10px;
+=======
+    padding-bottom: 25px;
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
   }
   .contact-rightSide-inputs button {
     margin-top: 10px;
@@ -184,6 +222,7 @@ textarea::placeholder {
     width: 75%;
   }
 }
+<<<<<<< HEAD
 
 @media (min-width: 800px) and (max-width: 900px) {
   .contact-leftSide-icons li {
@@ -449,4 +488,17 @@ textarea::placeholder {
   .contact-order-bottom-img {
     display: none;
   }
+=======
+@media (min-width: 1000px) and (max-width: 1100px) {
+  .contact-leftSide-icons li {
+    grid-template-columns: 17% 46%;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+  .contact-rightSide-inputs input,
+  textarea {
+    margin-top: 10px;
+  }
+>>>>>>> 4d5d62b400acfabb78661d554c0e47557f94a6eb
 }
