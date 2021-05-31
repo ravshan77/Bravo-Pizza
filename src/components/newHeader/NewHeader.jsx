@@ -11,6 +11,8 @@ import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import "./NewHeader.css";
+import About from "../../pages/About/About"
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -76,6 +78,22 @@ const NewHeader = () => {
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+
+        <Link to="/about">
+         <MenuItem onClick={handleMenuClose}>
+           About
+         </MenuItem>
+        </Link>
+
+        <Link to="/contact">
+         <MenuItem onClick={handleMenuClose}>
+           Contact
+         </MenuItem>
+        </Link>
+
+
+     
+
     </Menu>
   );
 
@@ -168,6 +186,7 @@ const NewHeader = () => {
             >
               <MoreIcon />
             </IconButton>
+            
           </div>
         </Toolbar>
       </AppBar>

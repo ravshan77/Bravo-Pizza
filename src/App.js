@@ -11,6 +11,9 @@ import { useSelector } from "react-redux"
 import NewHeader from "./components/newHeader/NewHeader";
 import BottomHeader from "./components/Bottom-Header/bottomHeader"
 import ProductModal from './components/productModal/ProductModal'
+import  Footer  from "./pages/Footer/Footer";
+import Contact from "./pages/Contact/Contact"
+import About from "./pages/About/About"
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
@@ -60,13 +63,27 @@ function App() {
           exact 
           render={(props) => <Cake props={props}  />} />
 
+         <Route 
+          path="/contact" 
+          exact 
+          render={(props) => <Contact props={props}  />} />
+           <Route 
+          path="/about" 
+          exact 
+          render={(props) => <About props={props}  />} />
+         
+
+
         <Route
         path="/filteredByCost/:id"
         render={(props) => {
           return <FilteredByCost props={props} data={foods} />;
         }}
-        />  
+
+        
+        /> 
       </Switch>
+      <Footer />
       {/* <ThemeComponenet /> */}
       {/* <CallBack /> */}
       {/* <ThemeProvider>
@@ -81,6 +98,7 @@ function App() {
       </Suspense> */}
       {/* <Footer/> */}
       {/* <Example/> */}
+
     </div>
   );
 }
