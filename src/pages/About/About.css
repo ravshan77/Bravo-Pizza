@@ -1,0 +1,449 @@
+.img-txt-top {
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 80px;
+  display: grid;
+  padding-bottom: 20px;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid gray;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.lefted-txt {
+  /* text-align: right; */
+  margin-left: 10px;
+  margin-top: 70px;
+}
+.image1 {
+  height: 700px;
+  width: 580px;
+}
+.left-heading {
+  margin-bottom: 30px;
+}
+.para-one {
+  margin-bottom: 20px;
+}
+.para-two {
+  margin-bottom: 20px;
+}
+.checkImg {
+  height: 35px;
+  width: 35px;
+  margin-right: 8px;
+}
+li {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* title starts here */
+.title-of-team {
+  text-align: center;
+  margin: 30px 0;
+}
+.title-heading {
+  font-size: 30px;
+}
+
+/* below four images start here */
+.grid-image-wrapper {
+  display: grid;
+  justify-items: center;
+  margin-top: 100px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.grid-image {
+  width: 250px;
+  height: 500px;
+  font-size: 17px;
+  text-align: center;
+  line-height: 25px;
+  color: rgb(77, 74, 74);
+}
+.image-team {
+  border-radius: 5px;
+  height: 280px;
+  width: 250px;
+}
+.image-team:hover {
+  height: 283px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.z-index {
+  background-color: rgb(255, 180, 41);
+  padding: 15px 0;
+  margin-top: -20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.z-index:hover {
+  color: red;
+  cursor: pointer;
+}
+.grid-icons img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.grid-icons img:hover {
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  border-bottom-width: 1px;
+  border-bottom: 1px solid gray;
+  transition-duration: 0.5s;
+}
+.grid-txt {
+  font-size: 17px;
+}
+.bold-txt {
+  font-weight: bold;
+}
+
+@media (min-width: 1000px) and (max-width: 1100px) {
+  .grid-image-wrapper {
+    margin-top: 60px;
+  }
+  .grid-image {
+    width: 232px;
+    height: 490px;
+  }
+  .image-team {
+    height: 272px;
+    width: 233px;
+  }
+  .lefted-txt {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+  .img-txt-top {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 80px;
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: 61% 44%;
+    border-bottom: 1px solid gray;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .image1 {
+    height: 628px;
+    width: 490px;
+  }
+  .left-heading {
+    margin-bottom: 14px;
+  }
+  .para-one {
+    margin-bottom: 13px;
+    font-size: 18px;
+  }
+  .para-two {
+    margin-bottom: 13px;
+    font-size: 18px;
+  }
+  .lefted-txt li {
+    font-size: 18px;
+  }
+  .checkImg {
+    height: 29px;
+    width: 29px;
+    margin-right: 10px;
+  }
+
+  /* grid images start here */
+  .title-heading {
+    font-size: 26px;
+  }
+  .grid-image-wrapper {
+    margin-top: 60px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-txt {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+  .img-txt-top {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 80px;
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: 61% 39%;
+    border-bottom: 1px solid gray;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .image1 {
+    height: 550px;
+    width: 420px;
+  }
+  .left-heading {
+    margin-bottom: 14px;
+  }
+  .para-one {
+    margin-bottom: 13px;
+    font-size: 17px;
+  }
+  .para-two {
+    margin-bottom: 13px;
+    font-size: 17px;
+  }
+  .lefted-txt {
+    margin-left: 8px;
+    margin-top: -15px;
+  }
+  .lefted-txt li {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+  /* grid images start here */
+
+  .grid-image-wrapper {
+    margin-top: 60px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+  .img-txt-top {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 80px;
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: 100%;
+    border-bottom: 1px solid gray;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .right-img {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+  .image1 {
+    height: 574px;
+    width: 511px;
+  }
+  .left-heading {
+    margin-bottom: 14px;
+  }
+  .para-one {
+    margin-bottom: 13px;
+    font-size: 17px;
+  }
+  .para-two {
+    margin-bottom: 13px;
+    font-size: 18px;
+  }
+  .lefted-txt {
+    margin-left: 8px;
+    margin-top: -15px;
+  }
+  .lefted-txt li {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .checkImg {
+    height: 29px;
+    width: 29px;
+    margin-right: 10px;
+  }
+
+  /* grid images start here */
+  .title-heading {
+    font-size: 26px;
+  }
+  .grid-image-wrapper {
+    margin-top: 60px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-txt {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+  .img-txt-top {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 80px;
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: 100%;
+    border-bottom: 1px solid gray;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    grid-row-gap: 50px;
+  }
+  .right-img {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+  .image1 {
+    height: 574px;
+    width: 511px;
+  }
+  .left-heading {
+    margin-bottom: 14px;
+  }
+  .para-one {
+    margin-bottom: 13px;
+    font-size: 17px;
+  }
+  .para-two {
+    margin-bottom: 13px;
+    font-size: 18px;
+  }
+  .lefted-txt {
+    margin-left: 8px;
+    margin-top: -15px;
+  }
+  .lefted-txt li {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .checkImg {
+    height: 29px;
+    width: 29px;
+    margin-right: 10px;
+  }
+
+  /* grid images start here */
+  .title-heading {
+    font-size: 26px;
+  }
+  .grid-image-wrapper {
+    margin-top: 60px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-txt {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+  .img-txt-top {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 80px;
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: 100%;
+    border-bottom: 1px solid gray;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    grid-row-gap: 50px;
+  }
+  .right-img {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+  .image1 {
+    height: 538px;
+    width: 433px;
+  }
+  .left-heading {
+    margin-bottom: 14px;
+  }
+  .para-one {
+    margin-bottom: 13px;
+    font-size: 17px;
+  }
+  .para-two {
+    margin-bottom: 13px;
+    font-size: 18px;
+  }
+  .lefted-txt {
+    margin-left: 8px;
+    margin-top: -15px;
+  }
+  .lefted-txt li {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .checkImg {
+    height: 29px;
+    width: 29px;
+    margin-right: 10px;
+  }
+
+  /* grid images start here */
+  .title-heading {
+    font-size: 26px;
+  }
+  .grid-image-wrapper {
+    margin-top: 60px;
+    grid-template-columns: 1fr;
+  }
+  .grid-txt {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+  .img-txt-top {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 80px;
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: 100%;
+    border-bottom: 1px solid gray;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    grid-row-gap: 50px;
+  }
+  .right-img {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+  .image1 {
+    height: 463px;
+    width: 351px;
+  }
+  .left-heading {
+    margin-bottom: 14px;
+  }
+  .para-one {
+    margin-bottom: 13px;
+    font-size: 17px;
+  }
+  .para-two {
+    margin-bottom: 13px;
+    font-size: 18px;
+  }
+  .lefted-txt {
+    margin-left: 8px;
+    margin-top: -15px;
+  }
+  .lefted-txt li {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .checkImg {
+    height: 29px;
+    width: 29px;
+    margin-right: 10px;
+  }
+
+  /* grid images start here */
+  .title-heading {
+    font-size: 26px;
+  }
+  .grid-image-wrapper {
+    margin-top: 60px;
+    grid-template-columns: 1fr;
+  }
+  .grid-txt {
+    font-size: 17px;
+  }
+}

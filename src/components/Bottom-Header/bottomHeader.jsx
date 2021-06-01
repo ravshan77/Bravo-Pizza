@@ -20,7 +20,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BottomHeader = () => {
+const BottomHeader = ({ props }) => {
+  const { history } = props;
+
+  const his = history.location.pathname;
+
   const classes = useStyles();
   const { food } = useSelector((state) => state.cardData);
   const sum = food.map((item) => {
@@ -38,75 +42,76 @@ const BottomHeader = () => {
     setShow(!show);
   };
 
-  const handleMouseLeave = () => {
-    setShow(!show);
-  };
-
   const handleChangeCost = (event) => {
     setCost(() => event.target.value);
   };
 
   return (
     <AppBar position="sticky" className={classes.AppBar}>
-      <div className="bottom-header">
-        <div className="subStores">
-          <div className="link_items">
-            <NavLink to="/" activeClassName="activeClass" exact>
-              <li className="link-header-pages">Pizza</li>
-            </NavLink>
-            <NavLink to="/food" activeClassName="activeClass">
-              <li className="link-header-pages">Food</li>
-            </NavLink>
-            <NavLink to="/drink" activeClassName="activeClass">
-              <li className="link-header-pages">Drink</li>
-            </NavLink>
-            <NavLink to="/cake" activeClassName="activeClass">
-              <li className="link-header-pages">Cakes</li>
-            </NavLink>
-            <div className="search">
-              <input
-                placeholder="Cost search"
-                type="number"
-                className="searchInput"
-                onChange={handleChangeCost}
-                value={cost}
-              />
+      <div className={`${his == "/goToStore" ? "dnne" : "dnbl"}`}>
+        <div className="bottom-header">
+          <div className="subStores">
+            <div className="link_items">
+              <NavLink to="/" activeClassName="activeClass" exact>
+                <li className="link-header-pages">Pizza</li>
+              </NavLink>
+              <NavLink to="/food" activeClassName="activeClass">
+                <li className="link-header-pages">Food</li>
+              </NavLink>
+              <NavLink to="/drink" activeClassName="activeClass">
+                <li className="link-header-pages">Drink</li>
+              </NavLink>
+              <NavLink to="/cake" activeClassName="activeClass">
+                <li className="link-header-pages">Cakes</li>
+              </NavLink>
+              <NavLink to="/about" activeClassName="activeClass">
+                <li className="link-header-pages disp_none">about</li>
+              </NavLink>
+              <NavLink to="/contact" activeClassName="activeClass" >
+                <li className="link-header-pages disp_none">contact</li>
+              </NavLink>
+              <div className="search">
+                <input
+                  placeholder="Cost search"
+                  type="number"
+                  className="searchInput"
+                  onChange={handleChangeCost}
+                  value={cost}
+                />
 
-              <Link to={`/filteredByCost/${cost}`} className={classes.link}>
-                <Button>
-                  <SearchIcon className={classes.searchIcon} />
-                </Button>
-              </Link>
+                <Link to={`/filteredByCost/${cost}`} className={classes.link}>
+                  <Button>
+                    <SearchIcon className={classes.searchIcon} />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="bottomHeader-korzenka-item">
+              <p className={`${collected > 0 ? "costKorzenka" : "off"}`}>
+                {new Intl.NumberFormat("en-US", { style: "decimal" }).format(
+                  toOrder.toFixed(2) / 10
+                )}{" "}
+                so'm
+              </p>
+              <p className={`${collected <= 0 ? "korzenka" : "off"}`}>Store</p>
+              <div
+                onMouseEnter={handleMouseMove}
+                aria-label="show 11 new notifications"
+              >
+                <Badge badgeContent={collected} color="secondary">
+                  <LocalGroceryStoreIcon htmlColor="black" />
+                </Badge>
+              </div>
             </div>
           </div>
-
-          <div className="bottomHeader-korzenka-item">
-            <p className={`${collected > 0 ? "costKorzenka" : "off"}`}>
-              {new Intl.NumberFormat("en-US", { style: "decimal" }).format(
-                toOrder.toFixed(2) / 10
-              )}{" "}
-              so'm
-            </p>
-            <p className={`${collected <= 0 ? "korzenka" : "off"}`}>Store</p>
-            <IconButton
-              onMouseEnter={handleMouseMove || handleMouseLeave}
-              aria-label="show 11 new notifications"
-            >
-              <Badge badgeContent={collected} color="secondary">
-                <LocalGroceryStoreIcon htmlColor="black" />
-              </Badge>
-            </IconButton>
-          </div>
         </div>
+        <SubCard show={show} />
       </div>
-      <SubCard show={show} />
     </AppBar>
   );
 };
 
 export default BottomHeader;
-
-
-
 
 // created by Ravshan

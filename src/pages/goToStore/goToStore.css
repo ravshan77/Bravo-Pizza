@@ -1,0 +1,435 @@
+/* STORE CARD HEADER  */
+.store_header {
+  display: flex;
+  width: 100%;
+}
+.b {
+  border: 1px solid rgb(126, 120, 120);
+}
+.store_header_logos {
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+
+@media (max-width: 960px) {
+  .store_header {
+    display: none;
+  }
+}
+
+/* STORE CARD HEADER  END*/
+
+/* FIRST STORE STYLE */
+.first_Store {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.all_Store_data {
+  width: 55%;
+  margin: 0 auto;
+}
+
+.store_korzenkaText {
+  font-size: 35px;
+  font-weight: bolder;
+  font-family: cursive;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.topShadov_store {
+  width: 100%;
+  background-color: black;
+  box-shadow: 0px 0px 4px 0.1px black;
+}
+
+.store_scroling {
+  width: 100%;
+  height: 40%;
+  max-height: 400px;
+  margin: 1% auto;
+  overflow: auto;
+}
+
+.store_cards {
+  margin: 1% auto;
+}
+
+.store_cards_items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1%;
+}
+
+.cards_imge_item {
+  width: 13%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cards_imge_item_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.cards_label_item {
+  width: 42%;
+}
+
+.cards_label_item_label {
+  font-size: 14.4px;
+  font-weight: bolder;
+  font-family: cursive;
+}
+
+.cards_buttons_item {
+  width: 13%;
+}
+
+.cards_buttons_item_button {
+  background-color: rgb(239, 239, 239);
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.store_Btns {
+  border: none;
+  width: 32%;
+  border-radius: 10px;
+  font-weight: bolder;
+  font-family: cursive;
+}
+
+.cards_cost_item {
+  width: 22%;
+}
+
+.cards_cost_item_text {
+  font-weight: bolder;
+  font-family: cursive;
+  font-size: 14.4px;
+}
+
+.cards_delete_item {
+  width: 6%;
+}
+
+.store_bottom_data {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 5%;
+}
+
+.store_total_Cost {
+  display: flex;
+  align-items: center;
+  text-align: end;
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: cursive;
+  margin-top: 3%;
+}
+
+@media (min-width: 320px) and (max-width: 411px) {
+  .all_Store_data {
+    width: 100%;
+  }
+  .store_bottom_data {
+    margin-top: 5%;
+  }
+  .store_total_Cost {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 14px;
+  }
+  .proma_code_text {
+    font-size: 12px;
+  }
+  .store_korzenkaText {
+    font-size: 19px;
+  }
+  .cards_label_item_label {
+    font-size: 8.3px;
+  }
+  .cards_cost_item_text {
+    font-size: 8.3px;
+  }
+  .store_Btns {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 411px) and (max-width: 568px) {
+  .all_Store_data {
+    width: 100%;
+  }
+  .store_total_Cost {
+    font-size: 16px;
+  }
+  .proma_code_text {
+    font-size: 14px;
+  }
+  .store_korzenkaText {
+    font-size: 22px;
+  }
+  .cards_label_item_label {
+    font-size: 10px;
+  }
+  .cards_cost_item_text {
+    font-size: 10px;
+  }
+  .store_Btns {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 768px) {
+  .proma_code_text {
+    font-size: 14px;
+  }
+  .all_Store_data {
+    width: 90%;
+  }
+  .store_total_Cost {
+    font-size: 16px;
+  }
+  .store_korzenkaText {
+    font-size: 25px;
+  }
+  .cards_label_item_label {
+    font-size: 12px;
+  }
+  .cards_cost_item_text {
+    font-size: 12px;
+  }
+  .store_Btns {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+  .all_Store_data {
+    width: 80%;
+  }
+  .store_total_Cost {
+    font-size: 19px;
+  }
+  .store_korzenkaText {
+    font-size: 29px;
+  }
+  .cards_label_item_label {
+    font-size: 13px;
+  }
+  .cards_cost_item_text {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1200px) {
+  .proma_code_tex {
+    font-size: 13px;
+  }
+  .all_Store_data {
+    width: 70%;
+  }
+  .store_korzenkaText {
+    font-size: 30px;
+  }
+  .cards_label_item_label {
+    font-size: 14px;
+  }
+  .cards_cost_item_text {
+    font-size: 14px;
+  }
+}
+
+/* FIRST STORE PAGE END */
+
+/* TWO STORE STAYL */
+
+.Two_store_form {
+  width: 54%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.Two_store_TopItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Two_store_HomeCodes {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+}
+
+@media (min-width: 960px) and (max-width: 1240px) {
+  .Two_store_form {
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+  .Two_store_form {
+    width: 70%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .Two_store_form {
+    width: 80%;
+  }
+}
+@media (min-width: 320px) and (max-width: 600px) {
+  .Two_store_form {
+    width: 100%;
+  }
+  .Two_store_TopItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .Two_store_HomeCodes {
+    width: 90%;
+  }
+}
+
+/* TWO STORE PAGE END */
+
+/* THREE STORE PAGE */
+
+.Three_store_form {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.bank_card_img_blok {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2%;
+  justify-content: flex-end;
+}
+
+.bank_card_imges {
+  width: 9%;
+  margin: 1%;
+}
+
+.bank_card_coders_zero_item {
+  width: 90%;
+  margin: 2% auto;
+}
+
+.bank_card_codes_blok {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 2% auto;
+}
+
+.bank_card_codes_one_item {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  align-items: center;
+}
+.card_slesh {
+  text-align: flex-end;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.bank_card_codes_two_item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 40%;
+}
+
+.bank_card_codes_three_item {
+  width: 90%;
+  margin: 2% auto;
+}
+
+.store_bankCard_Cost {
+  font-size: 16px;
+  font-weight: bolder;
+  /* font-family: cursive; */
+}
+.store_bankCard_Cost_red {
+  text-decoration-line: underline;
+  color: red;
+  font-size: 20px;
+}
+
+.store_bankCard_Cost_red {
+  font-size: 20px;
+}
+@media (min-width: 768px) and (max-width: 960px) {
+  .Three_store_form {
+    width: 55%;
+  }
+  .store_bankCard_Cost {
+    font-size: 16px;
+  }
+  .store_bankCard_Cost_red {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .Three_store_form {
+    width: 65%;
+  }
+  .store_bankCard_Cost {
+    font-size: 15px;
+  }
+  .store_bankCard_Cost_red {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 600px) {
+  .Three_store_form {
+    width: 70%;
+  }
+  .store_bankCard_Cost {
+    font-size: 14px;
+  }
+  .store_bankCard_Cost_red {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 568px) {
+  .Three_store_form {
+    width: 100%;
+  }
+  .store_bankCard_Cost {
+    font-size: 12px;
+  }
+  .store_bankCard_Cost_red {
+    font-size: 14px;
+  }
+}
+
+/* THREE STORE PAGE END*/
