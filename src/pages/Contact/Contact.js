@@ -19,6 +19,7 @@ const Contact = () => {
       <div className="contact-details">
         <div className="left-side-info">
           <h2>Contact Details</h2>
+          <h2>Get in touch with us</h2>
           <div className="contact-txt">
             <ul className="contact-leftSide-icons">
               <li>
@@ -64,6 +65,16 @@ const Contact = () => {
             <input type="text" placeholder="Phone *" />
           </div>
 
+          <div className="adress">
+            <input type="text" placeholder="Adress *" />
+          </div>
+
+          <div className="textarea">
+            <textarea placeholder="Message *" />
+          </div>
+          <div className="submit-btn">
+          <button type="submit">Send</button>
+          </div>
           <div className="textarea">
             <textarea placeholder="Message *" />
           </div>

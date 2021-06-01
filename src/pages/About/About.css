@@ -1,6 +1,7 @@
 .img-txt-top {
   margin: 0 auto;
   width: 90%;
+  width: 97%;
   margin-top: 80px;
   display: grid;
   padding-bottom: 20px;
@@ -21,6 +22,9 @@
   margin-bottom: 30px;
 }
 .para-one {
+  margin-bottom: 20px;
+}
+.para-two {
   margin-bottom: 20px;
 }
 .para-two {

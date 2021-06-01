@@ -85,6 +85,7 @@ textarea {
 }
 .contact-rightSide-inputs textarea {
   padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 input::placeholder {
   color: black;
@@ -177,6 +178,8 @@ textarea::placeholder {
   .contact-rightSide-inputs textarea {
     padding-bottom: 10px;
     padding-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
   .contact-rightSide-inputs button {
     margin-top: 10px;
@@ -184,7 +187,6 @@ textarea::placeholder {
     width: 75%;
   }
 }
-
 @media (min-width: 800px) and (max-width: 900px) {
   .contact-leftSide-icons li {
     display: grid;
