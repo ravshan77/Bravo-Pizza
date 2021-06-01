@@ -1,7 +1,7 @@
 .img-txt-top {
   margin: 0 auto;
   width: 90%;
-  width: 97%;
+  /* width: 97%; */
   margin-top: 80px;
   display: grid;
   padding-bottom: 20px;
@@ -52,6 +52,8 @@ li {
 
 /* below four images start here */
 .grid-image-wrapper {
+  margin: 0 auto;
+  width: 90%;
   display: grid;
   justify-items: center;
   margin-top: 100px;

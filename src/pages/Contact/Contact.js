@@ -18,7 +18,6 @@ const Contact = () => {
 
       <div className="contact-details">
         <div className="left-side-info">
-          <h2>Contact Details</h2>
           <h2>Get in touch with us</h2>
           <div className="contact-txt">
             <ul className="contact-leftSide-icons">
@@ -75,11 +74,6 @@ const Contact = () => {
           <div className="submit-btn">
           <button type="submit">Send</button>
           </div>
-          <div className="textarea">
-            <textarea placeholder="Message *" />
-          </div>
-
-          <button type="submit">Send</button>
         </div>
       </div>
       {/* BACKGROUND-IMAGE */}
