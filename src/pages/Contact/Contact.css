@@ -452,3 +452,68 @@ textarea::placeholder {
     display: none;
   }
 }
+
+@media (min-width: 300px) and (max-width: 400px) {
+  .left-side-info {
+    margin-left: 0px;
+  }
+  .left-side-info h2 {
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 32px;
+  }
+  .contact-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 50px 0;
+    padding: 30px 0;
+  }
+  .contact-leftSide-icons {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .contact-leftSide-icons li {
+    grid-template-columns: 21% 71%;
+    font-size: 17px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  .contact-leftSide-icons li img {
+    height: 40px;
+    width: 40px;
+    padding: 9px;
+  }
+  .contact-leftSide-icons a {
+    margin-top: 0px;
+  }
+  .contact-rightSide-inputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+  }
+  .contact-rightSide-inputs input {
+    width: 255px;
+    margin-top: 10px;
+  }
+  .contact-rightSide-inputs textarea {
+    width: 255px;
+    padding-top: 20px;
+    padding-bottom: 12px;
+  }
+  .submit-btn button {
+    width: 255px;
+  }
+  iframe {
+    height: 400px;
+  }
+  .contact-order-top-img {
+    display: none;
+  }
+  .contact-order-bottom-img {
+    display: none;
+  }
+}
