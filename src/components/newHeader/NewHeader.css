@@ -5,7 +5,9 @@
 .dnnon {
   display: block;
 }
-
+.MuiPaper-elevation4 {
+  box-shadow: none;
+}
 .header-logo {
   width: 7%;
 }
@@ -89,24 +91,24 @@
     width: 75%;
   }
   .BravoPizza {
-    font-size: 17px;
+    font-size: 19px;
   }
   .thankYou {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .DostafkaPizza {
     font-weight: bold;
-    font-size: 13px;
+    font-size: 15px;
   }
   .Min {
-    font-size: 10px;
+    font-size: 12px;
   }
   .TheCall {
-    font-size: 11px;
+    font-size: 13px;
   }
   .headerNumber {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 

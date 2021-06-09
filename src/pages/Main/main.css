@@ -22,6 +22,7 @@
 .halal {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding-top: 10px;
 }
 
@@ -38,9 +39,14 @@
   color: rgb(92, 99, 112);
 }
 
-@media (min-width: 320px) and (max-width: 568px) {
+@media (min-width: 1125px) {
   .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 844px) and (max-width: 1124px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -50,14 +56,13 @@
   }
 }
 
-@media (min-width: 844px) and (max-width: 1124px) {
+@media (min-width: 320px) and (max-width: 568px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
+  .halal {
+    padding-left: 1rem;
   }
 }
 
-@media (min-width: 1125px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}

@@ -19,7 +19,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  /* padding-left: 2rem; */
+}
+.menu_icon {
+  display: none;
+  cursor: pointer;
 }
 .link-header-pages {
   padding-top: 6px;
@@ -54,6 +57,7 @@
   font-size: 16px;
   font-weight: bolder;
   font-family: cursive;
+  padding-right: 10px;
 }
 .costKorzenka {
   font-weight: bolder;
@@ -78,10 +82,6 @@ a {
 
 /* search  */
 @media (min-width: 568px) and (max-width: 960px) {
-  .link-header-pages {
-    margin-right: 13px;
-    font-size: 14px;
-  }
   .bottomHeader-korzenka-item {
     width: 190px;
   }
@@ -103,43 +103,72 @@ a {
   }
 }
 
-@media (min-width: 768px) and (max-width: 960px) {
+@media (min-width: 769px) and (max-width: 960px) {
   .link-header-pages {
-    font-size: 13px;
+    font-size: 15px;
     margin-right: 23px;
   }
 }
+
+
+@media (max-width: 768px) {
+  .menu_icon {
+    display: block;
+    font-size: 23px;
+    z-index: 99999;
+    color: black;
+    padding-left: 3px;
+  }
+  .menu_icon .fa-times {
+    position: fixed;
+    top: 7%;
+    left: 5%;
+}
+  .link_items {
+    position: fixed;
+    background-color: #fff;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    max-width: 100%;
+    padding: 50px;
+    /* display: block; */
+    /* text-align: center; */
+    /* transition: all .4s ease; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .link_items.active {
+    top: 0%;
+  }
+  .link-header-pages {
+    font-size: 17px;
+  }
+}
+
 /* search media */
 @media (min-width: 568px) and (max-width: 768px) {
+
   .search {
     height: 25px;
     width: 150px;
   }
-  .disp_none {
+  /* .disp_none {
     display: none;
-  }
+  } */
 }
 
 
 @media (min-width: 320px) and (max-width: 568px) {
-
-  .costKorzenka,
-  .korzenka,
-  .search {
-    display: none;
-  }
   .bottomHeader-korzenka-item {
-    width: 0px;
+    width: 100%;
   }
-  .link-header-pages {
-    font-size: 14px;
-    margin-right: 25px;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 448px) {
-  .disp_none {
-    display: none;
+  .costKorzenka {
+    padding-right: 10px;
   }
 }
 

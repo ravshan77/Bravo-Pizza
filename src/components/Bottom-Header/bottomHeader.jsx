@@ -38,8 +38,17 @@ const BottomHeader = ({ props }) => {
   const toOrder = orderCost.reduce((a, b) => a + b, 0);
   const [show, setShow] = React.useState(false);
   const [cost, setCost] = React.useState("");
+  // burger
+  const [click, setClick] = React.useState(false);
+  const handleClick = () => setClick(!click);
+
   const handleMouseMove = () => {
     setShow(!show);
+  };
+
+  const clickSearchIcon = () => {
+    setClick(false);
+    setCost("")
   };
 
   const handleChangeCost = (event) => {
@@ -51,24 +60,27 @@ const BottomHeader = ({ props }) => {
       <div className={`${his == "/goToStore" ? "dnne" : "dnbl"}`}>
         <div className="bottom-header">
           <div className="subStores">
-            <div className="link_items">
+            <div className="menu_icon" onClick={handleClick}>
+              <i className={click ? "fas fa-times" : "fas fa-bars"} />
+            </div>
+            <div className={click ? "link_items active" : "link_items"}>
               <NavLink to="/" activeClassName="activeClass" exact>
-                <li className="link-header-pages">Pizza</li>
+                <li onClick={() => setClick(false)} className="link-header-pages">Pizza</li>
               </NavLink>
               <NavLink to="/food" activeClassName="activeClass">
-                <li className="link-header-pages">Food</li>
+                <li onClick={() => setClick(false)} className="link-header-pages">Food</li>
               </NavLink>
               <NavLink to="/drink" activeClassName="activeClass">
-                <li className="link-header-pages">Drink</li>
+                <li onClick={() => setClick(false)} className="link-header-pages">Drink</li>
               </NavLink>
               <NavLink to="/cake" activeClassName="activeClass">
-                <li className="link-header-pages">Cakes</li>
+                <li onClick={() => setClick(false)} className="link-header-pages">Cakes</li>
               </NavLink>
               <NavLink to="/about" activeClassName="activeClass">
-                <li className="link-header-pages disp_none">about</li>
+                <li onClick={() => setClick(false)} className="link-header-pages disp_none">about</li>
               </NavLink>
-              <NavLink to="/contact" activeClassName="activeClass" >
-                <li className="link-header-pages disp_none">contact</li>
+              <NavLink to="/contact" activeClassName="activeClass">
+                <li onClick={() => setClick(false)} className="link-header-pages disp_none">contact</li>
               </NavLink>
               <div className="search">
                 <input
@@ -80,7 +92,7 @@ const BottomHeader = ({ props }) => {
                 />
 
                 <Link to={`/filteredByCost/${cost}`} className={classes.link}>
-                  <Button>
+                  <Button onClick={clickSearchIcon}>
                     <SearchIcon className={classes.searchIcon} />
                   </Button>
                 </Link>

@@ -18,6 +18,7 @@
   font-size: 22px;
   line-height: 24px;
   font-weight: 600;
+  /* text-align: center; */
 }
 
 .card_text_price {
@@ -28,6 +29,7 @@
 .card_product_text p {
   color: rgb(92, 99, 112);
   font-size: 15px;
+  /* text-align: center; */
 }
 
 .card_product_prices {
@@ -36,6 +38,7 @@
   justify-content: space-between;
   padding-top: 10px;
   position: absolute;
+  /* left: 2%; */
   bottom: 0;
 }
 .card_product_prices p {
