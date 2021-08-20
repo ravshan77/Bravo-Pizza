@@ -141,7 +141,7 @@
   margin-top: 3%;
 }
 
-@media (min-width: 320px) and (max-width: 411px) {
+@media (min-width: 0px) and (max-width: 411px) {
   .all_Store_data {
     width: 100%;
   }
@@ -296,7 +296,7 @@
     width: 80%;
   }
 }
-@media (min-width: 320px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 600px) {
   .Two_store_form {
     width: 100%;
   }
@@ -373,7 +373,6 @@
 .store_bankCard_Cost {
   font-size: 16px;
   font-weight: bolder;
-  /* font-family: cursive; */
 }
 .store_bankCard_Cost_red {
   text-decoration-line: underline;
@@ -420,7 +419,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 568px) {
+@media (min-width: 0px) and (max-width: 568px) {
   .Three_store_form {
     width: 100%;
   }

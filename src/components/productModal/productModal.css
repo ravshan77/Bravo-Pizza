@@ -1,238 +1,236 @@
 .modal {
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.6);
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0,5s;
-    z-index: 9999;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0, 5s;
+  z-index: 9999;
 }
 .modal.active {
-    opacity: 1;
-    pointer-events: all;
+  opacity: 1;
+  pointer-events: all;
 }
 .modal__content {
-    padding: 20px;
-    border-radius: 20px;
-    background-color: #fff;
-    width: 69%;
-    height: 93%;
-    transform: scale(0.5);
-    transition: 0.4s;
-    overflow-x: scroll;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 69%;
+  height: 93%;
+  transform: scale(0.5);
+  transition: 0.4s;
+  overflow-x: scroll;
 }
 .modal__content.active {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .modal_card_products {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1.6fr 1fr;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
 }
 .modal_product_img {
-    padding-top: 18%;
-    padding-left: 2rem;
+  padding-top: 18%;
+  padding-left: 2rem;
 }
-.modal_product_img img{
-    width: 80%;
-    border-radius: 50%;
+.modal_product_img img {
+  width: 80%;
+  border-radius: 50%;
 }
 
 .modal_product_info {
-    padding-top: 5px;
+  padding-top: 5px;
 }
 
 .modal_product_total {
-    margin-top: 15px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    border-radius: 5px;
-    width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  width: 100%;
 }
 .totalInfo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    line-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 28px;
 }
 
 .modal_product_ingredients {
-    padding-top: 15px;
+  padding-top: 15px;
 }
 .modal_product_ingredients .food_category ol {
-    padding-top: 5px;
+  padding-top: 5px;
 }
 .modal_product_ingredients .food_category ol li {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 .modal_product_ingredients .food_ingredients h3 {
-    padding-top: 10px;
-    padding-bottom: 4px;
+  padding-top: 10px;
+  padding-bottom: 4px;
 }
 .add_to_card {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 .add_to_card button {
-    border: none;
-    outline: none;
-    width: 100%;
-    padding: 11px 18px;
-    background-color: rgb(255, 105, 0);
-    color: #fff;
-    font-size: 17px;
-    border-radius: 42px;
-    cursor: pointer;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 11px 18px;
+  background-color: rgb(255, 105, 0);
+  color: #fff;
+  font-size: 17px;
+  border-radius: 42px;
+  cursor: pointer;
 }
 .close_button {
-    position: absolute;
-    top: 3.5%;
-    right: 12%;
+  position: absolute;
+  top: 3.5%;
+  right: 12%;
 }
 .close_btn {
-    color: #fff;
-    cursor: pointer;
-    transform: scale(1);
-    transition: .3s ease;
+  color: #fff;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.3s ease;
 }
 .close_btn:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* MEDIA QUERY START */
 @media (min-width: 871px) and (max-width: 1200px) {
-    .modal__content {
-        width: 75%;
-        height: 91%;
-    }
-    .modal_card_products {
-        grid-template-columns: 1fr 1fr;
-    }
-    .modal_product_img {
-        padding-top: 19%;
-        padding-left: 0px;
-        text-align: center;
-    }
-    .modal_product_img img{
-        width: 90%;
-    }
-    .modal_product_label {
-        text-align: center;
-    }
-    .add_to_card {
-        text-align: center;
-    }
-    .add_to_card button {
-        width: 80%;
-        padding: 14px 17px;
-        font-size: 16px;
-    }
-    .close_button {
-        top: 5%;
-        right: 6%;
-    }
+  .modal__content {
+    width: 75%;
+    height: 91%;
+  }
+  .modal_card_products {
+    grid-template-columns: 1fr 1fr;
+  }
+  .modal_product_img {
+    padding-top: 19%;
+    padding-left: 0px;
+    text-align: center;
+  }
+  .modal_product_img img {
+    width: 90%;
+  }
+  .modal_product_label {
+    text-align: center;
+  }
+  .add_to_card {
+    text-align: center;
+  }
+  .add_to_card button {
+    width: 80%;
+    padding: 14px 17px;
+    font-size: 16px;
+  }
+  .close_button {
+    top: 5%;
+    right: 6%;
+  }
 }
 
-
 @media (min-width: 768px) and (max-width: 870px) {
-    .modal__content {
-        width: 75%;
-        height: 91%;
-    }
-    .modal_card_products {
-        grid-template-columns: 1fr;
-    }
-    .modal_product_img {
-        padding-top: 5%;
-        padding-left: 0px;
-        text-align: center;
-    }
-    .modal_product_img img{
-        width: 60%;
-    }
-    .modal_product_label {
-        text-align: center;
-    }
-    .add_to_card {
-        text-align: center;
-    }
-    .add_to_card button {
-        width: 80%;
-        padding: 14px 17px;
-        font-size: 16px;
-    }
-    .close_button {
-        top: 5%;
-        right: 6%;
-    }
+  .modal__content {
+    width: 75%;
+    height: 91%;
+  }
+  .modal_card_products {
+    grid-template-columns: 1fr;
+  }
+  .modal_product_img {
+    padding-top: 5%;
+    padding-left: 0px;
+    text-align: center;
+  }
+  .modal_product_img img {
+    width: 60%;
+  }
+  .modal_product_label {
+    text-align: center;
+  }
+  .add_to_card {
+    text-align: center;
+  }
+  .add_to_card button {
+    width: 80%;
+    padding: 14px 17px;
+    font-size: 16px;
+  }
+  .close_button {
+    top: 5%;
+    right: 6%;
+  }
 }
 
 @media (min-width: 569px) and (max-width: 767px) {
-    .modal__content {
-        width: 75%;
-        height: 91%;
-    }
-    .modal_card_products {
-        grid-template-columns: 1fr;
-    }
-    .modal_product_img {
-        padding-top: 5%;
-        padding-left: 0px;
-        text-align: center;
-    }
-    .modal_product_img img{
-        width: 60%;
-    }
-    .modal_product_label {
-        text-align: center;
-    }
-    .add_to_card {
-        text-align: center;
-    }
-    .add_to_card button {
-        width: 80%;
-        padding: 14px 17px;
-        font-size: 16px;
-    }
-    .close_button {
-        top: 5%;
-        right: 4%;
-    }
+  .modal__content {
+    width: 75%;
+    height: 91%;
+  }
+  .modal_card_products {
+    grid-template-columns: 1fr;
+  }
+  .modal_product_img {
+    padding-top: 5%;
+    padding-left: 0px;
+    text-align: center;
+  }
+  .modal_product_img img {
+    width: 60%;
+  }
+  .modal_product_label {
+    text-align: center;
+  }
+  .add_to_card {
+    text-align: center;
+  }
+  .add_to_card button {
+    width: 80%;
+    padding: 14px 17px;
+    font-size: 16px;
+  }
+  .close_button {
+    top: 5%;
+    right: 4%;
+  }
 }
 
-@media (min-width: 320px) and (max-width: 568px) {
-    .modal__content {
-        width: 75%;
-        height: 91%;
-    }
-    .modal_card_products {
-        grid-template-columns: 1fr;
-    }
-    .modal_product_img {
-        padding-top: 5%;
-        padding-left: 0px;
-        text-align: center;
-    }
-    .modal_product_label {
-        text-align: center;
-    }
-    .add_to_card {
-        text-align: center;
-    }
-    .add_to_card button {
-        width: 90%;
-        padding: 10px 17px;
-        font-size: 16px;
-    }
-    .close_button {
-        top: 5%;
-        right: 1.5%;
-    }
+@media (min-width: 0px) and (max-width: 568px) {
+  .modal__content {
+    width: 75%;
+    height: 91%;
+  }
+  .modal_card_products {
+    grid-template-columns: 1fr;
+  }
+  .modal_product_img {
+    padding-top: 5%;
+    padding-left: 0px;
+    text-align: center;
+  }
+  .modal_product_label {
+    text-align: center;
+  }
+  .add_to_card {
+    text-align: center;
+  }
+  .add_to_card button {
+    width: 90%;
+    padding: 10px 17px;
+    font-size: 16px;
+  }
+  .close_button {
+    top: 5%;
+    right: 1.5%;
+  }
 }
-

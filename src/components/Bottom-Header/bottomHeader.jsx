@@ -4,12 +4,11 @@ import Button from "@material-ui/core/Button";
 import { useSelector } from "react-redux";
 import LocalGroceryStoreIcon from "@material-ui/icons/LocalGroceryStore";
 import Badge from "@material-ui/core/Badge";
-import IconButton from "@material-ui/core/IconButton";
 import SubCard from "./SubCard";
-import "./bottomHeader.css";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import SearchIcon from "@material-ui/icons/Search";
+import "./bottomHeader.css";
 
 const useStyles = makeStyles((theme) => ({
   Badge: {
@@ -21,24 +20,30 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const BottomHeader = ({ props }) => {
-  const { history } = props;
-
-  const his = history.location.pathname;
-
   const classes = useStyles();
+
+  // Store stepper Header
+  const { history } = props;
+  const hisHeader = history.location.pathname;
+
   const { food } = useSelector((state) => state.cardData);
   const sum = food.map((item) => {
     return item.count;
   });
+
+  // badge Store counting
   const collected = sum.reduce((a, b) => a + b, 0);
 
+  // total cost
   const orderCost = food.map((item) => {
     return item.cost;
   });
   const toOrder = orderCost.reduce((a, b) => a + b, 0);
+
+  // handle SubCard
   const [show, setShow] = React.useState(false);
-  const [cost, setCost] = React.useState("");
-  // burger
+
+  // Humburger
   const [click, setClick] = React.useState(false);
   const handleClick = () => setClick(!click);
 
@@ -46,18 +51,20 @@ const BottomHeader = ({ props }) => {
     setShow(!show);
   };
 
-  const clickSearchIcon = () => {
-    setClick(false);
-    setCost("")
+  // search cost products
+  const [costSearch, setCostSearch] = React.useState("");
+  const handleChangeCost = (event) => {
+    setCostSearch(() => event.target.value);
   };
 
-  const handleChangeCost = (event) => {
-    setCost(() => event.target.value);
+  const clickSearchIcon = () => {
+    setClick(false);
+    setCostSearch("");
   };
 
   return (
     <AppBar position="sticky" className={classes.AppBar}>
-      <div className={`${his == "/goToStore" ? "dnne" : "dnbl"}`}>
+      <div className={`${hisHeader == "/goToStore" ? "dnne" : "dnbl"}`}>
         <div className="bottom-header">
           <div className="subStores">
             <div className="menu_icon" onClick={handleClick}>
@@ -65,22 +72,52 @@ const BottomHeader = ({ props }) => {
             </div>
             <div className={click ? "link_items active" : "link_items"}>
               <NavLink to="/" activeClassName="activeClass" exact>
-                <li onClick={() => setClick(false)} className="link-header-pages">Pizza</li>
+                <li
+                  onClick={() => setClick(false)}
+                  className="link-header-pages"
+                >
+                  Pizza
+                </li>
               </NavLink>
               <NavLink to="/food" activeClassName="activeClass">
-                <li onClick={() => setClick(false)} className="link-header-pages">Food</li>
+                <li
+                  onClick={() => setClick(false)}
+                  className="link-header-pages"
+                >
+                  Food
+                </li>
               </NavLink>
               <NavLink to="/drink" activeClassName="activeClass">
-                <li onClick={() => setClick(false)} className="link-header-pages">Drink</li>
+                <li
+                  onClick={() => setClick(false)}
+                  className="link-header-pages"
+                >
+                  Drink
+                </li>
               </NavLink>
               <NavLink to="/cake" activeClassName="activeClass">
-                <li onClick={() => setClick(false)} className="link-header-pages">Cakes</li>
+                <li
+                  onClick={() => setClick(false)}
+                  className="link-header-pages"
+                >
+                  Cakes
+                </li>
               </NavLink>
               <NavLink to="/about" activeClassName="activeClass">
-                <li onClick={() => setClick(false)} className="link-header-pages disp_none">about</li>
+                <li
+                  onClick={() => setClick(false)}
+                  className="link-header-pages disp_none"
+                >
+                  about
+                </li>
               </NavLink>
               <NavLink to="/contact" activeClassName="activeClass">
-                <li onClick={() => setClick(false)} className="link-header-pages disp_none">contact</li>
+                <li
+                  onClick={() => setClick(false)}
+                  className="link-header-pages disp_none"
+                >
+                  contact
+                </li>
               </NavLink>
               <div className="search">
                 <input
@@ -88,14 +125,18 @@ const BottomHeader = ({ props }) => {
                   type="number"
                   className="searchInput"
                   onChange={handleChangeCost}
-                  value={cost}
+                  value={costSearch}
                 />
-
-                <Link to={`/filteredByCost/${cost}`} className={classes.link}>
-                  <Button onClick={clickSearchIcon}>
-                    <SearchIcon className={classes.searchIcon} />
-                  </Button>
-                </Link>
+                {costSearch > 0 && (
+                  <Link
+                    to={`/filteredByCost/${costSearch}`}
+                    className={classes.link}
+                  >
+                    <Button onClick={clickSearchIcon}>
+                      <SearchIcon className={classes.searchIcon} />
+                    </Button>
+                  </Link>
+                )}
               </div>
             </div>
 
@@ -126,4 +167,3 @@ const BottomHeader = ({ props }) => {
 
 export default BottomHeader;
 
-// created by Ravshan

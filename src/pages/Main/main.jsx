@@ -1,12 +1,14 @@
 import React from 'react';
 import CardItem from '../../components/card/card';
-
+import CoruselUi from "../../components/corusel-ui/coruselUi";
+import ProductModal from "../../components/productModal/ProductModal"
 import './main.css';
 
 const Main = ({ pizza }) => {
+	console.log(pizza)
 	return (
 		<div className='mainPage'>
-			
+			      <ProductModal />
 			<div className='halal'>
 				<div className='halal_img'>
 					<img
@@ -15,9 +17,12 @@ const Main = ({ pizza }) => {
 					/>
 				</div>
 				<div className='halal_info'>
-					<p className='bez_svini'>Без свинины</p>
-					<h5>Мы готовим из цыпленка и говядины</h5>
+					<p className='bez_svini'>Pork is not added</p>
+					<p className='bez_svini'>We cook with chicken and beef</p>
 				</div>
+			</div>
+			<div className="coruselUi">
+			<CoruselUi/>
 			</div>
 			<div className='cards'>
 				{pizza &&

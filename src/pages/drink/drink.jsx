@@ -11,7 +11,7 @@ const Drink = () => {
   const APP_ID = "57e2140e";
   const APP_KEY = "8296dd333e28a28ed070e8554821dfeb";
   const resData = useFetch(
-    `https://api.edamam.com/search?q=drink&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=12`
+    `https://api.edamam.com/search?q=drink&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=100`
   );
 
   const pizza = resData.more && resData.hits.map((item) => item.recipe);
@@ -24,8 +24,6 @@ const Drink = () => {
     Date();
   }, [resData]);
 
-  console.log("drinkdagi pizza", pizza);
-
   return (
     <div>
       <Main pizza={pizza} />
@@ -36,5 +34,3 @@ const Drink = () => {
 
 export default Drink;
 
-
-// created by Ravshan

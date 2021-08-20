@@ -11,8 +11,8 @@ import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import logo from "../../assets/Logo/photo_2021-05-26_02-30-21.jpg";
-import "./NewHeader.css";
 import { Link } from "react-router-dom";
+import "./NewHeader.css";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -50,16 +50,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const NewHeader = ({ props }) => {
-  const { history } = props;
-
-  const his = history.location.pathname;
-
   const classes = useStyles();
+  
+  // // Store stepper Header
+  const { history } = props;
+  const hisHeader = history.location.pathname;
+
+  // isopen Mobile responsev  
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
-
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleProfileMenuOpen = (event) => {
@@ -79,6 +80,7 @@ const NewHeader = ({ props }) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
+  // moble menu
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -91,23 +93,16 @@ const NewHeader = ({ props }) => {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-
         <Link to="/about">
          <MenuItem onClick={handleMenuClose}>
            About
          </MenuItem>
         </Link>
-
         <Link to="/contact">
          <MenuItem onClick={handleMenuClose}>
            Contact
          </MenuItem>
         </Link>
-
-
-     
-
     </Menu>
   );
 
@@ -122,22 +117,22 @@ const NewHeader = ({ props }) => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-        {/* <MenuItem>
+        <MenuItem>
           <IconButton aria-label="show 4 new mails" color="inherit">
-            <Badge badgeContent={4} color="secondary">
+            <Badge badgeContent={2} color="secondary">
               <MailIcon />
             </Badge>
           </IconButton>
           <p>Messages</p>
-        </MenuItem> */}
-      {/* <MenuItem>
+        </MenuItem>
+      <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
+          <Badge badgeContent={1} color="secondary">
             <NotificationsIcon />
           </Badge>
         </IconButton>
         <p>Notifications</p>
-      </MenuItem> */}
+      </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -153,7 +148,7 @@ const NewHeader = ({ props }) => {
   );
 
   return (
-    <div className={`${his == "/goToStore" ? "dnn" : "dnnon"}`}>
+    <div className={`${hisHeader == "/goToStore" ? "dnn" : "dnnon"}`}>
       <AppBar position="static" className={classes.AppBar}>
         <div className={classes.Toolbar}>
           <div className="header-logo">
@@ -178,7 +173,6 @@ const NewHeader = ({ props }) => {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            {/* <MenuItem> */}
               <IconButton
                 edge="end"
                 aria-label="account of current user"
@@ -189,7 +183,6 @@ const NewHeader = ({ props }) => {
               >
                 <AccountCircle />
               </IconButton>
-            {/* </MenuItem> */}
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
@@ -214,4 +207,3 @@ const NewHeader = ({ props }) => {
 
 export default NewHeader;
 
-// created by Ravshan

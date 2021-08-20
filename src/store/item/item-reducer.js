@@ -65,7 +65,13 @@ const cardData = (state = initialState, action) => {
             return{
                 ...state,
                 modalInfo: payload
+
             };
+        case ITEM_TYPE.EMPTY_CARD:
+          return {
+            ...state,
+            food: payload
+          }  
 
         default:
           return state;

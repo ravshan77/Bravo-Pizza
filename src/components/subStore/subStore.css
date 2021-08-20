@@ -68,8 +68,6 @@
 
 .button-box {
   width: 85%;
-  /* height: 50%; */
-  /* background-color: rgb(255, 105, 0); */
   background-color: rgb(243, 243, 247);
   display: flex;
   justify-content: space-between;
@@ -82,7 +80,6 @@
 .pilusMinus-Btn {
   width: 24%;
   height: 70%;
-  /* background-color: white; */
   background-color: rgb(243, 243, 247);
   border-radius: 50%;
   outline: none;
@@ -119,7 +116,7 @@
   font-family: cursive;
 }
 
-@media (min-width: 320px) and (max-width: 411px) {
+@media (min-width: 0px) and (max-width: 411px) {
   .data-label {
     font-size: 12px;
   }

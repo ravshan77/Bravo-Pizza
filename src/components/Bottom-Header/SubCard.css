@@ -25,7 +25,6 @@
 .goStoreText {
   padding-left: 7px;
   font-size: 16px;
-  /* color: rgb(255, 105, 0); */
   font-weight: bold;
 }
 .empty-store {
@@ -34,12 +33,10 @@
 }
 .empt-imges {
   width: 70%;
-  /* height: 70%; */
   margin: 0 auto;
 }
 .empty-img {
   width: 240px;
-  /* height: 100%; */
   margin-top: 10%;
 }
 .empty_text {

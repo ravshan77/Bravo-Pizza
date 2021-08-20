@@ -1,0 +1,23 @@
+.end {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  font-size: 18px;
+}
+
+.dodopizza {
+  font-size: 19px;
+  color: red;
+  font-weight: bold;
+}
+
+.btn_home {
+  outline: none;
+  background: none;
+  padding: 7px;
+  border-radius: 5px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+

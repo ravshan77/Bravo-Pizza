@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { fade, makeStyles } from "@material-ui/core/styles";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
@@ -10,27 +10,26 @@ import "./goToStore.css";
 import { Link } from "react-router-dom";
 import SvgIcon from "@material-ui/core/SvgIcon";
 import { useForm, Controller } from "react-hook-form";
-// FIRST STEPPERONE COMPONENT
+// 1 Stepper
 import { useDispatch, useSelector } from "react-redux";
 import {
   addFood,
   decreaseFood,
   removeFood,
+  emptyCard
 } from "../../store/item/item-action";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
-// TWU STEPPERTWO COMPONENT
+// 2 Stepper
 import Card from "@material-ui/core/Card";
 import TextField from "@material-ui/core/TextField";
-// THREE STEPPERTHREE COMPONENT
+// 3 Stepper
 import payme from "../../assets/Bank_Card_Imgs/download 1.png";
 import mir from "../../assets/Bank_Card_Imgs/image 9.png";
 import visa from "../../assets/Bank_Card_Imgs/image 10.png";
 import masterCard from "../../assets/Bank_Card_Imgs/image 11.png";
 import Popover from "@material-ui/core/Popover";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
-// import Cake from "../../pages/cake/cake";
-// import StepperOne from "../../components/Steppers/Stepper1/Stepper1";
 import NumberFormat from "react-number-format";
 
 const useStyles = makeStyles((theme) => ({
@@ -135,7 +134,6 @@ const useStyles = makeStyles((theme) => ({
       width: "90%",
     },
     border: "none",
-    // backgroundColor:"red"
   },
   FlatUntilFlor: {
     width: "45%",
@@ -174,8 +172,11 @@ function getSteps() {
 
 const GoToStore = () => {
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(0);
+  const dispatch = useDispatch();
   const steps = getSteps();
+
+  // Stepper count
+  const [activeStep, setActiveStep] = React.useState(0);
   function HomeIcon(props) {
     return (
       <SvgIcon {...props}>
@@ -184,35 +185,37 @@ const GoToStore = () => {
     );
   }
 
+  // reset store 
   const handleReset = () => {
     setActiveStep(0);
+    dispatch(emptyCard([]))
   };
+  
 
+  //  Stepper componets 1,2,3 
   function GetStepContent(stepIndex) {
-    const classes = useStyles();
 
+    // ext stepper component
     const handleNext = () => {
       setActiveStep((prevActiveStep) => prevActiveStep + 1);
       console.log("start ishladi");
     };
 
+    // Back stepper component
     const handleBack = () => {
       setActiveStep((prevActiveStep) => prevActiveStep - 1);
       console.log("back ishladi");
     };
 
+    // Stepper form data
     const { control, handleSubmit } = useForm();
-
     const onSubmit = (data) => {
-      console.log(data);
       setActiveStep((prevActiveStep) => prevActiveStep + 1);
-      alert(JSON.stringify(data));
     };
 
-    const dispatch = useDispatch();
 
     const { food } = useSelector((state) => state.cardData);
-
+// total cost
     const orderCost = food.map((item) => {
       return item.cost;
     });
@@ -220,10 +223,10 @@ const GoToStore = () => {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
 
+    // stepper header event Function
     const handleClick = (event) => {
       setAnchorEl(event.currentTarget);
     };
-
     const handleClose = () => {
       setAnchorEl(null);
     };
@@ -551,13 +554,6 @@ const GoToStore = () => {
                         customInput={TextField}
                         className={classes.cardCode}
                       />
-                      // <TextField
-                      //   className={classes.cardCode}
-                      //   type="number"
-                      //   required={true}
-                      //   {...field}
-                      //   label="Card Code"
-                      // />
                     )}
                     name="card code"
                     control={control}
@@ -661,11 +657,11 @@ const GoToStore = () => {
               >
                 Back
               </Button>
-              {/* <Link to="/"> */}
-              <Button type="submit" className={classes.finishedBtn}>
-                consent
+              <Link to="/end">
+              <Button type="submit" onClick={handleReset} className={classes.finishedBtn}>
+                  Reset
               </Button>
-              {/* </Link> */}
+              </Link>
             </form>
           </div>
         );
@@ -716,7 +712,9 @@ const GoToStore = () => {
             <Typography className={classes.instructions}>
               All steps completed
             </Typography>
-            <Button onClick={handleReset}>Reset</Button>
+            <Link to="/">
+              <Button onClick={handleReset}>Reset</Button>
+            </Link>
           </div>
         ) : (
           <div style={{ textAlign: "center" }}>

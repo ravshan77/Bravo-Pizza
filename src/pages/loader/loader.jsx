@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Backdrop from "@material-ui/core/Backdrop";
 import { CircularProgress } from "@material-ui/core";
-// import { useDispatch, useSelector} from "react-redux"
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {

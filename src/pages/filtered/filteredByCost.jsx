@@ -7,7 +7,7 @@ import "./filteredPageCard.css"
 const FilteredByCost = ( {props,data}) => {
   const { match, history } = props;
 
-const filteredByCost=data && data.filter((d)  =>  d.totalWeight.toFixed(3)*100 <= match.params.id )
+const filteredByCost = data && data.filter((d)  =>  d.totalWeight.toFixed(3)*100 <= match.params.id )
 
 
   return (
@@ -37,6 +37,3 @@ const filteredByCost=data && data.filter((d)  =>  d.totalWeight.toFixed(3)*100 <
 };
 
 export default FilteredByCost;
-
-
-// created by Ravshan

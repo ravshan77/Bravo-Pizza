@@ -1,26 +1,23 @@
 .footer-wrapper {
   margin-top: 50px;
   background-color: rgb(48, 46, 46);
-  border: 10px solid #fd9d3e;
-  border: 10px solid #fd9d3e;
-  border: 8px solid #fd9d3e;
+  border: 5px solid #fd9d3e;
   width: 100%;
 }
 .inner-txt {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   color: white;
-  padding: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 .div-one {
   text-align: center;
+  width: 220px;
 }
 .div-one h4 {
   color: #fd9d3e;
-  font-size: 15px;
+  padding-top: 20px;
   margin-bottom: 10px;
 }
 .div-one p {
@@ -34,7 +31,7 @@
 }
 .icons {
   text-align: center;
-  width: 900px;
+  margin-top: 25px;
   border-top: 1px solid black;
 }
 .icon-links p {
@@ -47,11 +44,13 @@
   height: 40px;
   width: 40px;
 }
+
 .icons img:hover {
-  height: 45px;
-  width: 45px;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
+  transform: rotate(360deg);
+  cursor: pointer;
 }
+
 @media (min-width: 900px) and (max-width: 1000px) {
   .icons {
     width: 755px;
@@ -167,7 +166,7 @@
   }
   .div-one {
     text-align: left;
-    width: 320px;
+    width: 0px;
     padding-bottom: 10px;
   }
   .div-one p {

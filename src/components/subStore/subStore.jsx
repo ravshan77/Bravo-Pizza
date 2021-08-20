@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./subStore.css";
-import { useHistory } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   addFood,
@@ -11,31 +10,28 @@ import {
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    minWidth: 275,
+    width: "95%",
+    height: "100px",
+    margin: "25px auto",
+  },
+  margin: {
+    padding: "0px",
+    color: "black",
+    cursor: "grab",
+  },
+  DeleteIcon: {
+    color: "rgb(255, 105, 0)",
+  },
+}));
+
 const SubStore = () => {
-  const history = useHistory();
-
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      minWidth: 275,
-      width: "95%",
-      height: "100px",
-      margin: "25px auto",
-    },
-    margin: {
-      padding: "0px",
-      color: "black",
-      cursor: "grab",
-    },
-    DeleteIcon: {
-      color: "rgb(255, 105, 0)",
-    },
-  }));
-
   const classes = useStyles();
   const dispatch = useDispatch();
-  const { food } = useSelector((state) => state.cardData);
 
-  // const storeItem = useSelector((state) => state.cardData.item);
+  const { food } = useSelector((state) => state.cardData);
 
   return (
     <div className="mr-top">
@@ -101,6 +97,3 @@ const SubStore = () => {
 
 export default SubStore;
 
-
-
-// created by Ravshan

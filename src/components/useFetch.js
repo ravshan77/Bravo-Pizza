@@ -1,6 +1,5 @@
 import {useState, useEffect} from "react"
 
-
 export const useFetch = (url) => {
     const [respdata, setRespData] = useState([]);
 
@@ -12,3 +11,5 @@ export const useFetch = (url) => {
     }, [url]) 
     return respdata
 }
+
+// har safar url almashganda yangi datalarni qaytarvchi custom hook 

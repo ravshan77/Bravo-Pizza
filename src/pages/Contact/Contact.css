@@ -64,7 +64,6 @@ iframe {
   transform: rotate(360deg);
   height: 50px;
   width: 50px;
-  /* transform: scale(1.5); */
   transition-duration: 1s;
   border: 1px solid #fd9d3e;
 }

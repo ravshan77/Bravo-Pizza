@@ -7,15 +7,12 @@ import { Link } from "react-router-dom";
 
 const SubCard = ({ show }) => {
   const { food } = useSelector((state) => state.cardData);
+
+  // product count
   const sum = food.map((item) => {
     return item.count;
   });
   const collected = sum.reduce((a, b) => a + b, 0);
-
-  const orderCost = food.map((item) => {
-    return item.cost;
-  });
-  const toOrder = orderCost.reduce((a, b) => a + b, 0);
 
   return (
     <div>
@@ -36,7 +33,6 @@ const SubCard = ({ show }) => {
             </div>
           ) : (
             <div className="empty-store">
-              {/* <h1 style={{ textAlign: "center", color: "black" }}>Empty</h1> */}
               <div className="empt-imges">
                 <img
                   className="empty-img"
@@ -44,10 +40,9 @@ const SubCard = ({ show }) => {
                 />
               </div>
               <div className="empty_text">
-                <h2>Ой, пусто!</h2>
-                <p>
-                  Мы всегда доставляем бесплатно, но сумма заказа должна быть от
-                  38 000 сум
+                <h2>The basket is empty!</h2>
+                <p style={{padding:"15px"}}>
+                We always deliver for free, but the order quantity must be at least 38,000 soums
                 </p>
               </div>
             </div>
@@ -60,4 +55,3 @@ const SubCard = ({ show }) => {
 
 export default SubCard;
 
-// created by Ravshan

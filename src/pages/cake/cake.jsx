@@ -11,7 +11,7 @@ const Cake = () => {
   const APP_ID = "57e2140e";
   const APP_KEY = "8296dd333e28a28ed070e8554821dfeb";
   const resData = useFetch(
-    `https://api.edamam.com/search?q=cake&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=12`
+    `https://api.edamam.com/search?q=cake&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=100`
   );
 
   const pizza = resData.more && resData.hits.map((item) => item.recipe);
@@ -35,5 +35,3 @@ const Cake = () => {
 
 export default Cake;
 
-
-// created by Ravshan

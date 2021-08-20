@@ -1,7 +1,6 @@
 .img-txt-top {
   margin: 0 auto;
   width: 90%;
-  /* width: 97%; */
   margin-top: 80px;
   display: grid;
   padding-bottom: 20px;
@@ -10,7 +9,6 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .lefted-txt {
-  /* text-align: right; */
   margin-left: 10px;
   margin-top: 70px;
 }
