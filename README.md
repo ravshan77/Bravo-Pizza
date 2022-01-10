@@ -44,7 +44,7 @@ List the ready features here:
 
 
 ## Screenshots
-![Example screenshot](https://bravopizzauz.netlify.app/static/media/g_1583835342_d69c14ad90c34dff8a9876a4dbe6c4d8.40e8a60a.jpeg)
+![Example screenshot](https://ravshanfayziyev.netlify.app/assets/img/portfolio/bravo.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
